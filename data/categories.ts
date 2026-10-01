@@ -15,9 +15,11 @@ export const rooms: Room[] = [
     name: "Living Room",
     subcategories: [
       { slug: "sofas-sectionals", name: "Sofas & Sectionals" },
+      { slug: "armchairs", name: "Armchairs" },
       { slug: "recliners", name: "Recliners" },
       { slug: "sofa-beds", name: "Sofa Beds" },
       { slug: "coffee-tables", name: "Coffee Tables" },
+      { slug: "console-tables", name: "Console Tables" },
       { slug: "tv-stands", name: "TV Stands" },
       { slug: "ottomans", name: "Ottomans" },
       { slug: "mirrors", name: "Mirrors" },
@@ -44,15 +46,15 @@ export const rooms: Room[] = [
     ],
   },
   {
-  slug: "home-office",
-  name: "Home Office",
-  subcategories: [
-    { slug: "desks", name: "Desks" },
-    { slug: "office-chairs", name: "Office Chairs" },
-    { slug: "bookshelves-storage", name: "Bookshelves & Storage" },
-    { slug: "filing-cabinets", name: "Filing Cabinets" },
-  ],
-},
+    slug: "home-office",
+    name: "Home Office",
+    subcategories: [
+      { slug: "desks", name: "Desks" },
+      { slug: "office-chairs", name: "Office Chairs" },
+      { slug: "bookshelves-storage", name: "Bookshelves & Storage" },
+      { slug: "filing-cabinets", name: "Filing Cabinets" },
+    ],
+  },
   {
     slug: "outdoor",
     name: "Outdoor",
