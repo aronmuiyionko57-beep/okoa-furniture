@@ -4,19 +4,19 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "", // add real image path later, e.g. "/images/hero-living-room.jpg"
+    image: "/images/products/round-arm-sofa-3-seater.jpg",
     eyebrow: "Quality Meets Comfort",
     title: "The Home of\nModern Designs",
     subtitle: "Quality furniture for every room — crafted for comfort, built to last.",
   },
   {
-    image: "",
+    image: "/images/products/box-arm-sofa-set.jpg",
     eyebrow: "Custom Made",
     title: "Furniture Built\nAround You",
     subtitle: "Tailored pieces designed to fit your space, style, and budget.",
   },
   {
-    image: "",
+    image: "/images/products/adjustable-l-shape-sectional-sofa-cream.jpg",
     eyebrow: "Order With Ease",
     title: "Shop, Chat,\nDelivered",
     subtitle: "Browse online, order instantly via WhatsApp — no hassle.",
@@ -41,19 +41,13 @@ export default function HeroCarousel() {
           className={`absolute inset-0 flex items-center justify-center text-center px-4 transition-opacity duration-1000 ${
             i === active ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
-          style={
-            slide.image
-              ? {
-                  backgroundImage: `url(${slide.image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }
-              : undefined
-          }
+          style={{
+            backgroundImage: `url(${slide.image})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
-          {slide.image && (
-            <div className="absolute inset-0 bg-black/50" />
-          )}
+          <div className="absolute inset-0 bg-black/50" />
           <div className="relative">
             <p className="text-okoa-orange text-xs font-semibold uppercase tracking-[0.3em] mb-4">
               {slide.eyebrow}
