@@ -1,15 +1,18 @@
-const DISCOUNT_OPTIONS = [10, 7, 15, 5, 3];
+import { Product } from "@/data/products";
 
-export function hasDiscount(id: string): boolean {
-  const num = parseInt(id, 10);
-  return num % 2 === 0; // roughly half of products
+export function isOnSale(product: Product): boolean {
+  return Boolean(product.salePrice && product.salePrice < product.regularPrice);
 }
 
-export function getDiscountPercent(id: string): number {
-  const num = parseInt(id, 10);
-  return DISCOUNT_OPTIONS[num % DISCOUNT_OPTIONS.length];
+export function getDiscountPercent(product: Product): number {
+  if (!isOnSale(product) || !product.salePrice) return 0;
+  return Math.round(
+    ((product.regularPrice - product.salePrice) / product.regularPrice) * 100
+  );
 }
 
-export function getOriginalPrice(price: number, discountPercent: number): number {
-  return Math.round(price / (1 - discountPercent / 100));
+export function getDisplayPrice(product: Product): number {
+  return isOnSale(product) && product.salePrice
+    ? product.salePrice
+    : product.regularPrice;
 }

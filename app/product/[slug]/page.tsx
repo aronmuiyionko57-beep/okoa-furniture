@@ -2,7 +2,7 @@ import { products } from "@/data/products";
 import { rooms } from "@/data/categories";
 import { notFound } from "next/navigation";
 import { getWhatsAppOrderLink } from "@/lib/whatsapp";
-import { hasDiscount, getDiscountPercent, getOriginalPrice } from "@/lib/pricing";
+import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import ProductImageCarousel from "@/components/ProductImageCarousel";
 import Link from "next/link";
 
@@ -18,6 +18,9 @@ export default async function ProductPage({
 
   const room = rooms.find((r) => r.slug === product.room);
   const sub = room?.subcategories.find((s) => s.slug === product.subcategory);
+  const onSale = product.showPrice && isOnSale(product);
+  const discount = onSale ? getDiscountPercent(product) : 0;
+  const displayPrice = getDisplayPrice(product);
 
   return (
     <main>
@@ -55,45 +58,32 @@ export default async function ProductPage({
       </div>
 
       <div className="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-12">
-        {(() => {
-          const onSale = product.showPrice && hasDiscount(product.id);
-          const discount = onSale ? getDiscountPercent(product.id) : 0;
-          return (
-            <div className="relative">
-              {onSale && (
-                <span className="absolute top-2 right-2 z-10 bg-okoa-orange text-white text-xs font-bold uppercase tracking-wide px-3 py-1.5 rounded-full shadow-md">
-                  Offer {discount}%
-                </span>
-              )}
-              <ProductImageCarousel images={product.images} name={product.name} />
-            </div>
-          );
-        })()}
+        <div className="relative">
+          {onSale && (
+            <span className="absolute top-2 right-2 z-10 bg-okoa-orange text-white text-xs font-bold uppercase tracking-wide px-3 py-1.5 rounded-full shadow-md">
+              Offer {discount}%
+            </span>
+          )}
+          <ProductImageCarousel images={product.images} name={product.name} />
+        </div>
 
         <div>
           <h1 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-okoa-dark mb-3">
             {product.name}
           </h1>
 
-          {product.showPrice && (() => {
-            const onSale = hasDiscount(product.id);
-            const discount = onSale ? getDiscountPercent(product.id) : 0;
-            const original = onSale
-              ? getOriginalPrice(product.price, discount)
-              : 0;
-            return (
-              <div className="mb-6 flex items-center gap-3">
-                <span className="text-2xl text-okoa-orange font-semibold">
-                  KSh {product.price.toLocaleString()}
+          {product.showPrice && (
+            <div className="mb-6 flex items-center gap-3">
+              <span className="text-2xl text-okoa-orange font-semibold">
+                KSh {displayPrice.toLocaleString()}
+              </span>
+              {onSale && (
+                <span className="text-lg text-gray-400 line-through">
+                  KSh {product.regularPrice.toLocaleString()}
                 </span>
-                {onSale && (
-                  <span className="text-lg text-gray-400 line-through">
-                    KSh {original.toLocaleString()}
-                  </span>
-                )}
-              </div>
-            );
-          })()}
+              )}
+            </div>
+          )}
 
           <p className="text-gray-600 mb-8 leading-relaxed">
             {product.description}
@@ -121,7 +111,7 @@ export default async function ProductPage({
           )}
 
           <a
-            href={getWhatsAppOrderLink(product.name)}
+            href={getWhatsAppOrderLink(product.name, product.showPrice ? displayPrice : undefined)}
             target="_blank"
             className="inline-block bg-okoa-dark text-white px-10 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-okoa-orange transition-colors duration-300"
           >

@@ -1,9 +1,21 @@
 const WHATSAPP_NUMBER = "254711682894"; // no + or leading 0
 
-export function getWhatsAppOrderLink(productName: string, productUrl?: string) {
-  const message = productUrl
-    ? `Hi, I'm interested in ${productName} — ${productUrl}`
-    : `Hi, I'm interested in ${productName}`;
+export function getWhatsAppOrderLink(
+  productName: string,
+  price?: number,
+  productUrl?: string
+) {
+  let message = `Hello OKOA Furniture, I'm interested in the ${productName}`;
+
+  if (price) {
+    message += ` listed at KSh ${price.toLocaleString()}`;
+  }
+
+  message += ". Is it currently available?";
+
+  if (productUrl) {
+    message += `\n${productUrl}`;
+  }
 
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

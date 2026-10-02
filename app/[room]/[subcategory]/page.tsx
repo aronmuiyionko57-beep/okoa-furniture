@@ -2,7 +2,7 @@ import { rooms } from "@/data/categories";
 import { products } from "@/data/products";
 import { notFound } from "next/navigation";
 import { getWhatsAppOrderLink } from "@/lib/whatsapp";
-import { hasDiscount, getDiscountPercent, getOriginalPrice } from "@/lib/pricing";
+import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -48,11 +48,9 @@ export default async function SubcategoryPage({
         {items.length > 0 ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             {items.map((product) => {
-              const onSale = product.showPrice && hasDiscount(product.id);
-              const discount = onSale ? getDiscountPercent(product.id) : 0;
-              const original = onSale
-                ? getOriginalPrice(product.price, discount)
-                : 0;
+              const onSale = product.showPrice && isOnSale(product);
+              const discount = onSale ? getDiscountPercent(product) : 0;
+              const displayPrice = getDisplayPrice(product);
 
               return (
                 <div
@@ -89,17 +87,17 @@ export default async function SubcategoryPage({
                     {product.showPrice && (
                       <div className="mb-3 flex items-center gap-2">
                         <span className="text-okoa-orange font-semibold">
-                          KSh {product.price.toLocaleString()}
+                          KSh {displayPrice.toLocaleString()}
                         </span>
                         {onSale && (
                           <span className="text-gray-400 text-sm line-through">
-                            KSh {original.toLocaleString()}
+                            KSh {product.regularPrice.toLocaleString()}
                           </span>
                         )}
                       </div>
                     )}
                     <a
-                      href={getWhatsAppOrderLink(product.name)}
+                      href={getWhatsAppOrderLink(product.name, product.showPrice ? displayPrice : undefined)}
                       target="_blank"
                       className="block text-center bg-okoa-dark text-white py-2.5 rounded-md text-sm font-semibold uppercase tracking-wide hover:bg-okoa-orange transition-colors duration-300"
                     >

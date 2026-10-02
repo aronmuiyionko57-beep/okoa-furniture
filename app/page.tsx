@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { rooms } from "@/data/categories";
 import { products } from "@/data/products";
-import { hasDiscount, getDiscountPercent, getOriginalPrice } from "@/lib/pricing";
+import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import HeroCarousel from "@/components/HeroCarousel";
 import WhyChooseUs from "@/components/WhyChooseUs";
 
@@ -23,7 +23,7 @@ const featuredSlugs = [
 export default function Home() {
   const featured = featuredSlugs
     .map((slug) => products.find((p) => p.slug === slug))
-    .filter(Boolean);
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   return (
     <main>
@@ -100,12 +100,9 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {featured.map((product) => {
-              if (!product) return null;
-              const onSale = product.showPrice && hasDiscount(product.id);
-              const discount = onSale ? getDiscountPercent(product.id) : 0;
-              const original = onSale
-                ? getOriginalPrice(product.price, discount)
-                : 0;
+              const onSale = product.showPrice && isOnSale(product);
+              const discount = onSale ? getDiscountPercent(product) : 0;
+              const displayPrice = getDisplayPrice(product);
 
               return (
                 <Link
@@ -133,11 +130,11 @@ export default function Home() {
                     {product.showPrice && (
                       <div className="flex items-center gap-2">
                         <span className="text-okoa-orange font-semibold text-sm">
-                          KSh {product.price.toLocaleString()}
+                          KSh {displayPrice.toLocaleString()}
                         </span>
                         {onSale && (
                           <span className="text-gray-400 text-xs line-through">
-                            KSh {original.toLocaleString()}
+                            KSh {product.regularPrice.toLocaleString()}
                           </span>
                         )}
                       </div>

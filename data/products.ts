@@ -4,7 +4,8 @@ export interface Product {
   name: string;
   room: string;
   subcategory: string;
-  price: number;
+  regularPrice: number;
+  salePrice?: number;
   showPrice?: boolean;
   description: string;
   images: string[];
@@ -19,7 +20,7 @@ export const products: Product[] = [
     name: "Modern 3-Seater Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 45000,
+    regularPrice: 45000,
     showPrice: false,
     description:
       "A comfortable, contemporary 3-seater sofa with clean lines, built for everyday living.",
@@ -33,7 +34,8 @@ export const products: Product[] = [
     name: "Linear Design Bed",
     room: "bedroom",
     subcategory: "beds",
-    price: 33000,
+    regularPrice: 33000,
+    salePrice: 28000,
     showPrice: true,
     description:
       "A striking channel-tufted bed frame in soft grey velvet, finished with polished gold accents for a bold, modern bedroom statement.",
@@ -47,7 +49,7 @@ export const products: Product[] = [
     name: "V-Design Bed (Grey)",
     room: "bedroom",
     subcategory: "beds",
-    price: 29000,
+    regularPrice: 29000,
     showPrice: true,
     description:
       "A sleek dark grey velvet bed frame featuring a distinctive V-shaped channel-tufted headboard for a modern, statement look.",
@@ -61,7 +63,8 @@ export const products: Product[] = [
     name: "V-Design Bed (Cream)",
     room: "bedroom",
     subcategory: "beds",
-    price: 30000,
+    regularPrice: 30000,
+    salePrice: 29100,
     showPrice: true,
     description:
       "A soft cream velvet bed frame featuring a distinctive V-shaped channel-tufted headboard for a warm, modern bedroom look.",
@@ -75,7 +78,7 @@ export const products: Product[] = [
     name: "Lines Design Bed",
     room: "bedroom",
     subcategory: "beds",
-    price: 29000,
+    regularPrice: 29000,
     showPrice: true,
     description:
       "A taupe velvet bed frame with a tall wingback-style channel-tufted headboard for a refined, modern bedroom centerpiece.",
@@ -89,7 +92,8 @@ export const products: Product[] = [
     name: "Wooden Panel Bed",
     room: "bedroom",
     subcategory: "beds",
-    price: 30000,
+    regularPrice: 30000,
+    salePrice: 27900,
     showPrice: true,
     description:
       "A classic white-painted solid wood bed frame with a paneled headboard and footboard for a timeless bedroom look.",
@@ -103,7 +107,7 @@ export const products: Product[] = [
     name: "Mocket Bed (6x6)",
     room: "bedroom",
     subcategory: "beds",
-    price: 35000,
+    regularPrice: 35000,
     showPrice: true,
     description:
       "A mahogany-finished wood bed frame with a cream upholstered channel-tufted headboard panel for a warm, classic look.",
@@ -117,7 +121,8 @@ export const products: Product[] = [
     name: "Mocket Bed (5x6)",
     room: "bedroom",
     subcategory: "beds",
-    price: 32000,
+    regularPrice: 32000,
+    salePrice: 30400,
     showPrice: true,
     description:
       "A natural wood bed frame with a cream sunburst-pattern upholstered headboard for a soft, elegant bedroom look.",
@@ -131,7 +136,7 @@ export const products: Product[] = [
     name: "Extended Headboard Bed",
     room: "bedroom",
     subcategory: "beds",
-    price: 45000,
+    regularPrice: 45000,
     showPrice: true,
     description:
       "A statement bed frame in dusty pink textured velvet with gold trim accents and a tall extended channel-tufted headboard.",
@@ -145,7 +150,8 @@ export const products: Product[] = [
     name: "Round Arm Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 40000,
+    regularPrice: 40000,
+    salePrice: 36000,
     showPrice: true,
     description:
       "A comfortable 3-seater sofa in soft beige fabric, featuring rounded wood-trimmed arms for a warm, classic living room look.",
@@ -159,7 +165,7 @@ export const products: Product[] = [
     name: "Box Arm Sofa Set",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 120000,
+    regularPrice: 120000,
     showPrice: true,
     description:
       "A full 3+2+2 sofa set in charcoal grey textured fabric, with permanent spring cushions and fibre back pillows for lasting comfort.",
@@ -173,7 +179,8 @@ export const products: Product[] = [
     name: "Marble Top Dining Set (Black & Grey)",
     room: "dining-room",
     subcategory: "dining-sets",
-    price: 55000,
+    regularPrice: 55000,
+    salePrice: 46800,
     showPrice: true,
     description:
       "An elegant dining set with a white marble-finish tabletop, black wood legs, and 4 grey tufted upholstered chairs.",
@@ -187,7 +194,7 @@ export const products: Product[] = [
     name: "L-Shape Sectional Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 60000,
+    regularPrice: 60000,
     showPrice: true,
     description:
       "A spacious 6-seater L-shape sectional in slate grey textured fabric, with removable spring cushions and pure fibre back pillows.",
@@ -201,7 +208,8 @@ export const products: Product[] = [
     name: "Tufted L-Shape Sectional Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 55000,
+    regularPrice: 55000,
+    salePrice: 53400,
     showPrice: true,
     description:
       "A 6-seater L-shape sectional in textured grey chenille with a quilted tufted pattern throughout, includes a matching ottoman.",
@@ -215,7 +223,7 @@ export const products: Product[] = [
     name: "7-Seater L-Shape Sectional Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 80000,
+    regularPrice: 80000,
     showPrice: true,
     description:
       "A custom-made 7-seater L-shape sectional in dark brown textured fabric with a matching ottoman, spring cushions, and fibre back pillows.",
@@ -229,7 +237,8 @@ export const products: Product[] = [
     name: "Cream L-Shape Sectional Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 85000,
+    regularPrice: 85000,
+    salePrice: 79000,
     showPrice: true,
     description:
       "A custom 9ft x 9ft L-shape sectional in off-white textured fabric with removable spring cushions and fibre back pillows.",
@@ -243,7 +252,7 @@ export const products: Product[] = [
     name: "Beige L-Shape Sectional Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 50000,
+    regularPrice: 50000,
     showPrice: true,
     description:
       "A 4-seater L-shape sectional in taupe/beige textured fabric with a matching ottoman, spring cushions, and fibre back pillows.",
@@ -257,7 +266,8 @@ export const products: Product[] = [
     name: "Nesting Coffee Tables",
     room: "living-room",
     subcategory: "coffee-tables",
-    price: 25000,
+    regularPrice: 25000,
+    salePrice: 23800,
     showPrice: true,
     description:
       "A set of 3 round nesting coffee tables with white marble-effect tops and polished gold metal frames.",
@@ -271,7 +281,7 @@ export const products: Product[] = [
     name: "Marble Top Dining Set (White & Cream)",
     room: "dining-room",
     subcategory: "dining-sets",
-    price: 55000,
+    regularPrice: 55000,
     showPrice: true,
     description:
       "A dining set with a glossy white marble-effect tabletop, white wood legs, and 4 cream tufted wingback chairs.",
@@ -285,7 +295,8 @@ export const products: Product[] = [
     name: "Charcoal 3+2 Sofa Set",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 75000,
+    regularPrice: 75000,
+    salePrice: 67500,
     showPrice: true,
     description:
       "A 3+2 sofa set in dark charcoal grey textured fabric with rounded arms, removable spring cushions, and permanent back cushions.",
@@ -299,7 +310,7 @@ export const products: Product[] = [
     name: "Adjustable L-Shape Sectional Sofa (Tan)",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 58000,
+    regularPrice: 58000,
     showPrice: true,
     description:
       "A 6-seater adjustable L-shape sectional in tan woven fabric with ottoman, spring cushions, and removable back pillows.",
@@ -313,7 +324,8 @@ export const products: Product[] = [
     name: "Diamond Panel Bed",
     room: "bedroom",
     subcategory: "beds",
-    price: 35000,
+    regularPrice: 35000,
+    salePrice: 29800,
     showPrice: true,
     description:
       "A dark espresso-stained solid wood bed frame with a diamond-pattern carved headboard for a rich, classic bedroom look.",
@@ -327,7 +339,7 @@ export const products: Product[] = [
     name: "Navy L-Shape Sectional Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 55000,
+    regularPrice: 55000,
     showPrice: true,
     description:
       "A 6-seater L-shape sectional in deep navy blue velvet with tufted spring cushions, tufted fibre back pillows, and a matching ottoman.",
@@ -341,7 +353,8 @@ export const products: Product[] = [
     name: "Chesterfield Storage Pouf",
     room: "living-room",
     subcategory: "ottomans",
-    price: 12000,
+    regularPrice: 12000,
+    salePrice: 11600,
     showPrice: true,
     description:
       "A round tufted velvet ottoman with a pull handle and hidden storage inside, available in grey and orange.",
@@ -355,7 +368,7 @@ export const products: Product[] = [
     name: "Bubble Sofa Set",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 85000,
+    regularPrice: 85000,
     showPrice: true,
     description:
       "A 3+2 sofa set in burnt orange channel-tufted velvet with a bold, cloud-like bubble design.",
@@ -369,7 +382,8 @@ export const products: Product[] = [
     name: "Butterfly Design Sofa Set",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 65000,
+    regularPrice: 65000,
+    salePrice: 60400,
     showPrice: true,
     description:
       "A 3+2 sofa set in sky blue textured fabric with tapered black metal legs, spring cushions, and pure fibre back pillows.",
@@ -383,7 +397,7 @@ export const products: Product[] = [
     name: "Bunk Bed with Storage",
     room: "bedroom",
     subcategory: "beds",
-    price: 60000,
+    regularPrice: 60000,
     showPrice: true,
     description:
       "A grey and white bunk bed featuring a built-in staircase with storage drawers and an under-bed storage drawer.",
@@ -397,7 +411,8 @@ export const products: Product[] = [
     name: "Bubble Design L-Shape Sofa (Navy)",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 70000,
+    regularPrice: 70000,
+    salePrice: 66500,
     showPrice: true,
     description:
       "A 6-seater L-shape sofa in navy blue bouclé-textured fabric with cloud-like bubble tufting throughout.",
@@ -411,7 +426,7 @@ export const products: Product[] = [
     name: "Adjustable L-Shape Sectional Sofa (Cream)",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 58000,
+    regularPrice: 58000,
     showPrice: true,
     description:
       "A 6-seater adjustable L-shape sectional in smooth cream fabric with spring cushions and pure fibre back pillows.",
@@ -425,7 +440,8 @@ export const products: Product[] = [
     name: "White TV Stand",
     room: "living-room",
     subcategory: "tv-stands",
-    price: 22000,
+    regularPrice: 22000,
+    salePrice: 19800,
     showPrice: true,
     description:
       "A two-tier white TV stand with gold handles and an open display shelf, 5 feet wide.",
@@ -439,7 +455,7 @@ export const products: Product[] = [
     name: "Fireplace TV Stand",
     room: "living-room",
     subcategory: "tv-stands",
-    price: 32000,
+    regularPrice: 32000,
     showPrice: true,
     description:
       "A glossy white TV stand with a diamond-pattern cabinet design, gold trim and legs, marble-effect top, and a built-in electric fireplace insert.",
@@ -453,7 +469,8 @@ export const products: Product[] = [
     name: "Hydraulic Storage Bed",
     room: "bedroom",
     subcategory: "beds",
-    price: 45000,
+    regularPrice: 45000,
+    salePrice: 38200,
     showPrice: true,
     description:
       "A black-finished solid wood bed frame with a hydraulic lift-up base revealing a spacious hidden storage compartment.",
@@ -467,7 +484,7 @@ export const products: Product[] = [
     name: "Black Fluted Console Table",
     room: "home-office",
     subcategory: "desks",
-    price: 25000,
+    regularPrice: 25000,
     showPrice: true,
     description:
       "A sleek black fluted wood console table, 6 feet long, ideal as an entryway table or compact workspace.",
@@ -481,7 +498,8 @@ export const products: Product[] = [
     name: "Hexagon Console Table",
     room: "living-room",
     subcategory: "console-tables",
-    price: 25000,
+    regularPrice: 25000,
+    salePrice: 24200,
     showPrice: true,
     description:
       "A console table with a glossy white marble-effect top resting on a bold black and gold geometric hexagon base.",
@@ -495,7 +513,7 @@ export const products: Product[] = [
     name: "X-Base Console Table",
     room: "living-room",
     subcategory: "console-tables",
-    price: 25000,
+    regularPrice: 25000,
     showPrice: true,
     description:
       "A console table with a white and pink-toned marble-effect top on a gold crisscross X-shaped base with a matching marble center panel.",
@@ -509,7 +527,8 @@ export const products: Product[] = [
     name: "White Fluted Console Table",
     room: "living-room",
     subcategory: "console-tables",
-    price: 25000,
+    regularPrice: 25000,
+    salePrice: 23200,
     showPrice: true,
     description:
       "A white ribbed/fluted console table with a layered gold frame base and hidden storage compartment.",
@@ -523,7 +542,7 @@ export const products: Product[] = [
     name: "Semi-Recliner Sofa Set",
     room: "living-room",
     subcategory: "recliners",
-    price: 150000,
+    regularPrice: 150000,
     showPrice: true,
     description:
       "A 7-seater semi-recliner sofa set in black textured leather-look fabric with wood trim and diamond-stitched headrests.",
@@ -537,7 +556,8 @@ export const products: Product[] = [
     name: "Mahogany Coffee Table with Stools",
     room: "living-room",
     subcategory: "coffee-tables",
-    price: 45000,
+    regularPrice: 45000,
+    salePrice: 42800,
     showPrice: true,
     description:
       "A solid mahogany round coffee table with 4 matching nesting stools tucked underneath.",
@@ -551,7 +571,7 @@ export const products: Product[] = [
     name: "Bubble Design L-Shape Sofa (Beige)",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 70000,
+    regularPrice: 70000,
     showPrice: true,
     description:
       "A 6-seater L-shape sofa in beige/oatmeal bouclé fabric with cloud-like bubble tufting throughout.",
@@ -565,7 +585,8 @@ export const products: Product[] = [
     name: "Royal Blue Sofa Set with Wood Base",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 85000,
+    regularPrice: 85000,
+    salePrice: 76500,
     showPrice: true,
     description:
       "A 3+2 sofa set in corduroy-textured royal blue fabric set on an exposed wooden frame base.",
@@ -579,7 +600,7 @@ export const products: Product[] = [
     name: "Classic Rolled Arm Sofa Set",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 105000,
+    regularPrice: 105000,
     showPrice: true,
     description:
       "A 3+2+1+1 sofa set in forest green textured fabric with classic stud-trim rolled arms.",
@@ -593,7 +614,8 @@ export const products: Product[] = [
     name: "Grey Tufted L-Shape Sectional Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 85000,
+    regularPrice: 85000,
+    salePrice: 72200,
     showPrice: true,
     description:
       "A 9ft x 9ft L-shape sectional in light grey textured fabric with quilted tufted backrests.",
@@ -607,7 +629,7 @@ export const products: Product[] = [
     name: "Dusty Blue Tufted L-Shape Sofa",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 70000,
+    regularPrice: 70000,
     showPrice: true,
     description:
       "A 7-seater L-shape sofa in denim-blue textured fabric with quilted tufting and a matching ottoman.",
@@ -621,7 +643,8 @@ export const products: Product[] = [
     name: "Velvet Shell Armchair",
     room: "living-room",
     subcategory: "armchairs",
-    price: 25000,
+    regularPrice: 25000,
+    salePrice: 24200,
     showPrice: true,
     description:
       "A round scalloped-back velvet accent chair, available in a range of bold colors.",
@@ -635,7 +658,7 @@ export const products: Product[] = [
     name: "Mahogany Dining Set (Ladder Back)",
     room: "dining-room",
     subcategory: "dining-sets",
-    price: 100000,
+    regularPrice: 100000,
     showPrice: true,
     description:
       "A solid mahogany dining table with 6 ladder-back chairs upholstered in cream fabric.",
@@ -649,7 +672,8 @@ export const products: Product[] = [
     name: "Mahogany Dining Set (Carved Back)",
     room: "dining-room",
     subcategory: "dining-sets",
-    price: 100000,
+    regularPrice: 100000,
+    salePrice: 93000,
     showPrice: true,
     description:
       "A solid mahogany dining table with 6 chairs featuring a carved wave-pattern backrest design.",
@@ -663,7 +687,7 @@ export const products: Product[] = [
     name: "Mahogany Dining Set (Oval Pedestal)",
     room: "dining-room",
     subcategory: "dining-sets",
-    price: 100000,
+    regularPrice: 100000,
     showPrice: true,
     description:
       "A solid mahogany oval pedestal dining table with 6 matching ladder-back chairs.",
@@ -677,7 +701,8 @@ export const products: Product[] = [
     name: "Cinema-Style Recliner Sofa",
     room: "living-room",
     subcategory: "recliners",
-    price: 85000,
+    regularPrice: 85000,
+    salePrice: 80800,
     showPrice: true,
     description:
       "A 3+2 recliner sofa set in tan leather-look fabric with built-in cup holder consoles.",
@@ -691,7 +716,7 @@ export const products: Product[] = [
     name: "Bunk Bed with Wardrobe & Drawers",
     room: "bedroom",
     subcategory: "beds",
-    price: 55000,
+    regularPrice: 55000,
     showPrice: true,
     description:
       "A black and white bunk bed with an integrated wardrobe cabinet and built-in storage drawers.",
@@ -705,7 +730,8 @@ export const products: Product[] = [
     name: "Study Desk",
     room: "home-office",
     subcategory: "desks",
-    price: 15000,
+    regularPrice: 15000,
+    salePrice: 13500,
     showPrice: true,
     description:
       "A dark wood slatted-back study desk paired with a matching cream upholstered accent chair.",
@@ -719,7 +745,7 @@ export const products: Product[] = [
     name: "Cream Tufted L-Shape Sofa (with USB Port)",
     room: "living-room",
     subcategory: "sofas-sectionals",
-    price: 55000,
+    regularPrice: 55000,
     showPrice: true,
     description:
       "A cream textured L-shape sofa with quilted tufted chaise, matching ottoman, and a built-in USB charging port.",
@@ -733,7 +759,8 @@ export const products: Product[] = [
     name: "Arched Dressing Mirror with Storage",
     room: "bedroom",
     subcategory: "bedroom-mirrors",
-    price: 28000,
+    regularPrice: 28000,
+    salePrice: 23800,
     showPrice: true,
     description:
       "A tall arched full-length mirror with a built-in side shelf unit and a glossy black-and-white table base with drawer.",
@@ -747,7 +774,7 @@ export const products: Product[] = [
     name: "Wooden Dining Set (Oval Back)",
     room: "dining-room",
     subcategory: "dining-sets",
-    price: 55000,
+    regularPrice: 55000,
     showPrice: true,
     description:
       "A mahogany dining table with an X-cross base and 4 chairs featuring oval upholstered backrests.",
@@ -761,7 +788,8 @@ export const products: Product[] = [
     name: "Curved LED Mirror",
     room: "bedroom",
     subcategory: "bedroom-mirrors",
-    price: 12000,
+    regularPrice: 12000,
+    salePrice: 11600,
     showPrice: true,
     description:
       "An hourglass-shaped full-length mirror with a black frame and built-in LED backlight.",
@@ -775,7 +803,7 @@ export const products: Product[] = [
     name: "Kenya-Shaped Mirror",
     room: "living-room",
     subcategory: "mirrors",
-    price: 11000,
+    regularPrice: 11000,
     showPrice: true,
     description:
       "A mirror cut in the shape of Kenya's map with an LED-lit edge.",
@@ -789,7 +817,8 @@ export const products: Product[] = [
     name: "Africa-Shaped Mirror",
     room: "bedroom",
     subcategory: "bedroom-mirrors",
-    price: 15000,
+    regularPrice: 15000,
+    salePrice: 14000,
     showPrice: true,
     description:
       "A mirror cut in the shape of the African continent with a blue LED backlight.",
@@ -803,7 +832,7 @@ export const products: Product[] = [
     name: "Arched Full-Length Mirror",
     room: "bedroom",
     subcategory: "bedroom-mirrors",
-    price: 8000,
+    regularPrice: 8000,
     showPrice: true,
     description:
       "A simple black-framed arched full-length mirror for bedroom or hallway use.",
@@ -817,7 +846,8 @@ export const products: Product[] = [
     name: "Wavy Freeform Mirror",
     room: "bedroom",
     subcategory: "bedroom-mirrors",
-    price: 12000,
+    regularPrice: 12000,
+    salePrice: 11400,
     showPrice: true,
     description:
       "An irregular wavy-outline mirror with a sleek black frame for a playful, modern accent wall piece.",
