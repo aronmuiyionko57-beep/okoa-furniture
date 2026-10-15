@@ -5,6 +5,25 @@ import { getWhatsAppOrderLink } from "@/lib/whatsapp";
 import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+import { PhoneIcon } from "@/components/icons";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ room: string; subcategory: string }>;
+}): Promise<Metadata> {
+  const { room: roomSlug, subcategory: subSlug } = await params;
+  const room = rooms.find((r) => r.slug === roomSlug);
+  const sub = room?.subcategories.find((s) => s.slug === subSlug);
+
+  if (!room || !sub) return { title: "Not Found | OKOA Furniture" };
+
+  return {
+    title: `${sub.name} | ${room.name} | OKOA Furniture`,
+    description: `Browse ${sub.name.toLowerCase()} in our ${room.name.toLowerCase()} collection — quality furniture, order directly via WhatsApp.`,
+  };
+}
 
 export default async function SubcategoryPage({
   params,
@@ -96,13 +115,25 @@ export default async function SubcategoryPage({
                         )}
                       </div>
                     )}
-                    <a
-                      href={getWhatsAppOrderLink(product.name, product.showPrice ? displayPrice : undefined)}
-                      target="_blank"
-                      className="block text-center bg-okoa-dark text-white py-2.5 rounded-md text-sm font-semibold uppercase tracking-wide hover:bg-okoa-orange transition-colors duration-300"
-                    >
-                      Order via WhatsApp
-                    </a>
+                    <div className="flex gap-2">
+  <a
+    href={getWhatsAppOrderLink(
+      product.name,
+      product.showPrice ? displayPrice : undefined
+    )}
+    target="_blank"
+    className="flex-1 text-center bg-okoa-dark text-white py-2.5 rounded-md text-sm font-semibold uppercase tracking-wide hover:bg-okoa-orange transition-colors duration-300"
+  >
+    Order via WhatsApp
+  </a>
+  <a
+    href="tel:+254711682894"
+    aria-label="Call us"
+    className="shrink-0 w-11 flex items-center justify-center border border-gray-200 rounded-md text-okoa-dark hover:border-okoa-dark hover:bg-okoa-dark hover:text-white transition-colors duration-300"
+  >
+    <PhoneIcon />
+  </a>
+</div>
                   </div>
                 </div>
               );

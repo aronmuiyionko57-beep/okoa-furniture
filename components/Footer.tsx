@@ -20,6 +20,14 @@ function TikTokIcon() {
   );
 }
 
+function FacebookIcon() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.1 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z" />
+    </svg>
+  );
+}
+
 function WhatsAppIcon() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -28,91 +36,148 @@ function WhatsAppIcon() {
   );
 }
 
+function PhoneIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z" />
+    </svg>
+  );
+}
+
+function MapPinIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+      <circle cx="12" cy="10" r="3" />
+    </svg>
+  );
+}
+
+const socialLinks = [
+  { href: "https://wa.me/254711682894", label: "Chat on WhatsApp", icon: WhatsAppIcon },
+  { href: "https://www.instagram.com/okoafurniture", label: "OKOA Furniture on Instagram", icon: InstagramIcon },
+  { href: "https://www.facebook.com/okoafurniture", label: "OKOA Furniture on Facebook", icon: FacebookIcon },
+  { href: "https://www.tiktok.com/@okoafurniture", label: "OKOA Furniture on TikTok", icon: TikTokIcon },
+];
+
 export default function Footer() {
   return (
     <footer className="relative bg-black text-white mt-24 overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-okoa-orange to-transparent" />
 
       <div className="relative max-w-7xl mx-auto px-4 pt-16 pb-8">
-        <div className="grid grid-cols-2 lg:grid-cols-8 gap-x-6 gap-y-10 mb-14">
-          <div className="col-span-2">
-            <div className="relative w-40 h-14 mb-4">
-              <Image
-                src="/images/okoa-logo.png"
-                alt="OKOA Furniture"
-                fill
-                sizes="160px"
-                className="object-contain"
-              />
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12 mb-14">
+          {/* Brand */}
+          <div className="md:col-span-5">
+            <Image
+              src="/images/okoa-logo.png"
+              alt="OKOA Furniture"
+              width={130}
+              height={42}
+              style={{ height: "auto" }}
+              className="mb-5"
+            />
             <p className="text-gray-400 text-sm mb-6 leading-relaxed max-w-xs">
               The home of modern designs. Quality furniture for every room —
               crafted for comfort, built to last.
             </p>
             <div className="flex gap-3">
-              <a
-                href="https://wa.me/254711682894"
-                target="_blank"
-                aria-label="Chat on WhatsApp"
-                className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-300 hover:border-okoa-orange hover:text-okoa-orange hover:bg-okoa-orange/10 transition-all duration-200"
-              >
-                <WhatsAppIcon />
-              </a>
-              <a
-                href="https://www.instagram.com/okoafurniture"
-                target="_blank"
-                aria-label="OKOA Furniture on Instagram"
-                className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-300 hover:border-okoa-orange hover:text-okoa-orange hover:bg-okoa-orange/10 transition-all duration-200"
-              >
-                <InstagramIcon />
-              </a>
-              <a
-                href="https://www.tiktok.com/@okoafurniture"
-                target="_blank"
-                aria-label="OKOA Furniture on TikTok"
-                className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-300 hover:border-okoa-orange hover:text-okoa-orange hover:bg-okoa-orange/10 transition-all duration-200"
-              >
-                <TikTokIcon />
-              </a>
+              {socialLinks.map(({ href, label, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  aria-label={label}
+                  className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center text-gray-300 hover:border-okoa-orange hover:text-okoa-orange hover:bg-okoa-orange/10 transition-all duration-200"
+                >
+                  <Icon />
+                </a>
+              ))}
             </div>
           </div>
 
-          {rooms.map((room) => (
-            <div key={room.slug}>
-              <h4 className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-4">
-                <Link href={`/${room.slug}`} className="hover:text-okoa-orange transition-colors">
-                  {room.name}
+          {/* Shop */}
+          <div className="md:col-span-4">
+            <h4 className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-5">
+              Shop
+            </h4>
+            <ul className="space-y-3 text-sm">
+              {rooms.map((room) => (
+                <li key={room.slug}>
+                  <Link
+                    href={`/${room.slug}`}
+                    className="text-gray-300 hover:text-okoa-orange transition-colors"
+                  >
+                    {room.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Get in touch */}
+          <div className="md:col-span-3">
+            <h4 className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-5">
+              Get in Touch
+            </h4>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="https://maps.app.goo.gl/UcyP7UAiBY8td7577"
+                  target="_blank"
+                  className="flex items-start gap-2 text-gray-300 hover:text-okoa-orange transition-colors"
+                >
+                  <span className="mt-0.5">
+                    <MapPinIcon />
+                  </span>
+                  <span>
+                    Roysambu, Nairobi
+                    <br />
+                    <span className="text-okoa-orange text-xs">
+                      Get Directions →
+                    </span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="tel:+254711682894"
+                  className="flex items-center gap-2 text-gray-300 hover:text-okoa-orange transition-colors"
+                >
+                  <PhoneIcon />
+                  0711 682 894
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/254711682894"
+                  target="_blank"
+                  className="flex items-center gap-2 text-gray-300 hover:text-okoa-orange transition-colors"
+                >
+                  <WhatsAppIcon />
+                  WhatsApp Us
+                </a>
+              </li>
+              <li>
+                <Link
+                  href="/custom-furniture"
+                  className="text-gray-300 hover:text-okoa-orange transition-colors"
+                >
+                  Request a Custom Quote
                 </Link>
-              </h4>
-              {room.subcategories.length > 0 && (
-                <ul className="space-y-2.5 text-sm">
-                  {room.subcategories.map((sub) => (
-                    <li key={sub.slug}>
-                      <Link
-                        href={`/${room.slug}/${sub.slug}`}
-                        className="text-gray-300 hover:text-okoa-orange transition-colors"
-                      >
-                        {sub.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
           <p className="text-xs text-gray-500">
             © {new Date().getFullYear()} OKOA Furniture. All rights reserved.
           </p>
-          <a
-            href="https://wa.me/254711682894"
-            target="_blank"
-            className="text-xs text-gray-400 hover:text-okoa-orange transition-colors"
-          >
-            0711 682 894 · Order via WhatsApp
-          </a>
+          <p className="text-xs text-gray-500">
+            Designed &amp; built by{" "}
+            <span className="text-gray-300">AROKELIX</span>
+          </p>
         </div>
       </div>
     </footer>

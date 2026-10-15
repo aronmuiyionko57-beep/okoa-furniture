@@ -146,13 +146,13 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-10">
-            <Link
-              href="/living-room"
-              className="inline-block border border-okoa-dark text-okoa-dark px-8 py-3 rounded-md font-medium text-sm uppercase tracking-wide hover:bg-okoa-dark hover:text-white transition-colors duration-300"
-            >
-              View All Furniture
-            </Link>
-          </div>
+  <Link
+    href="/living-room"
+    className="inline-block border border-okoa-dark text-okoa-dark px-8 py-3 rounded-md font-medium text-sm uppercase tracking-wide hover:bg-okoa-dark hover:text-white transition-colors duration-300"
+  >
+    View All Furniture
+  </Link>
+</div>
         </div>
       </section>
 

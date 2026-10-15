@@ -5,6 +5,33 @@ import { getWhatsAppOrderLink } from "@/lib/whatsapp";
 import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import ProductImageCarousel from "@/components/ProductImageCarousel";
 import Link from "next/link";
+import Image from "next/image";
+import type { Metadata } from "next";
+import { PhoneIcon } from "@/components/icons";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const product = products.find((p) => p.slug === slug);
+
+  if (!product) return { title: "Not Found | OKOA Furniture" };
+
+  return {
+    title: `${product.name} | OKOA Furniture`,
+    description: product.description,
+    openGraph: {
+      title: product.name,
+      description: product.description,
+      images:
+        product.images[0] !== "/images/placeholder.jpg"
+          ? [product.images[0]]
+          : [],
+    },
+  };
+}
 
 export default async function ProductPage({
   params,
@@ -21,6 +48,15 @@ export default async function ProductPage({
   const onSale = product.showPrice && isOnSale(product);
   const discount = onSale ? getDiscountPercent(product) : 0;
   const displayPrice = getDisplayPrice(product);
+
+  const related = products
+    .filter(
+      (p) =>
+        p.slug !== product.slug &&
+        p.room === product.room &&
+        p.subcategory === product.subcategory
+    )
+    .slice(0, 4);
 
   return (
     <main>
@@ -110,15 +146,86 @@ export default async function ProductPage({
             </div>
           )}
 
-          <a
-            href={getWhatsAppOrderLink(product.name, product.showPrice ? displayPrice : undefined)}
-            target="_blank"
-            className="inline-block bg-okoa-dark text-white px-10 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-okoa-orange transition-colors duration-300"
-          >
-            Order via WhatsApp
-          </a>
+          <div className="flex flex-col sm:flex-row gap-3">
+  <a
+    href={getWhatsAppOrderLink(
+      product.name,
+      product.showPrice ? displayPrice : undefined
+    )}
+    target="_blank"
+    className="inline-flex items-center justify-center gap-2 bg-okoa-dark text-white px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-okoa-orange transition-colors duration-300"
+  >
+    Order via WhatsApp
+  </a>
+  <a
+    href="tel:+254711682894"
+    className="inline-flex items-center justify-center gap-2 border border-gray-300 text-okoa-dark px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:border-okoa-dark transition-colors duration-300"
+  >
+    <PhoneIcon />
+    Call Us
+  </a>
+</div>
         </div>
       </div>
+
+      {/* Related Products */}
+      {related.length > 0 && (
+        <section className="bg-okoa-cream py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="font-[family-name:var(--font-playfair)] text-2xl font-bold text-okoa-dark mb-8 text-center">
+              You May Also Like
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {related.map((item) => {
+                const itemOnSale = item.showPrice && isOnSale(item);
+                const itemDiscount = itemOnSale ? getDiscountPercent(item) : 0;
+                const itemPrice = getDisplayPrice(item);
+
+                return (
+                  <Link
+                    key={item.id}
+                    href={`/product/${item.slug}`}
+                    className="group bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+                  >
+                    <div className="relative aspect-square bg-white overflow-hidden">
+                      {itemOnSale && (
+                        <span className="absolute top-2 right-2 z-10 bg-okoa-orange text-white text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full">
+                          Offer {itemDiscount}%
+                        </span>
+                      )}
+                      {item.images[0] !== "/images/placeholder.jpg" && (
+                        <Image
+                          src={item.images[0]}
+                          alt={item.name}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      )}
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-sm font-medium text-okoa-dark mb-1 group-hover:text-okoa-orange transition-colors">
+                        {item.name}
+                      </h3>
+                      {item.showPrice && (
+                        <div className="flex items-center gap-2">
+                          <span className="text-okoa-orange font-semibold text-sm">
+                            KSh {itemPrice.toLocaleString()}
+                          </span>
+                          {itemOnSale && (
+                            <span className="text-gray-400 text-xs line-through">
+                              KSh {item.regularPrice.toLocaleString()}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+      )}
     </main>
   );
 }

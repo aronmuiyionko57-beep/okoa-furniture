@@ -3,9 +3,28 @@ import { products } from "@/data/products";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
 
 export function generateStaticParams() {
   return rooms.map((room) => ({ room: room.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ room: string }>;
+}): Promise<Metadata> {
+  const { room: roomSlug } = await params;
+  const room = rooms.find((r) => r.slug === roomSlug);
+
+  if (!room) return { title: "Not Found | OKOA Furniture" };
+
+  return {
+    title: `${room.name} Furniture | OKOA Furniture`,
+    description: `Shop quality ${room.name.toLowerCase()} furniture at OKOA Furniture — ${room.subcategories
+      .map((s) => s.name.toLowerCase())
+      .join(", ")}. Order directly via WhatsApp.`,
+  };
 }
 
 export default async function RoomPage({
