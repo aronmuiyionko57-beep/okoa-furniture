@@ -6,6 +6,7 @@ import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import { SITE_URL, WHATSAPP_NUMBER, SOCIAL_LINKS } from "@/lib/config";
 import HeroCarousel from "@/components/HeroCarousel";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import ProductFilters from "@/components/ProductFilters";
 
 const roomImages: Record<string, string> = {
   "living-room": "/images/products/classic-rolled-arm-sofa-set-green.jpg",
@@ -53,16 +54,16 @@ export default function Home() {
 
       {/* Trust bar */}
       <section className="bg-okoa-cream py-5 px-4 border-b border-gray-200">
-        <div className="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-x-10 gap-y-2 text-center">
-          <p className="text-[11px] font-medium text-gray-500 uppercase tracking-[0.15em]">
+        <div className="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-center">
+          <p className="text-xs font-medium text-okoa-dark uppercase tracking-wide">
             Quality Craftsmanship
           </p>
-          <span className="hidden sm:inline text-gray-300">·</span>
-          <p className="text-[11px] font-medium text-gray-500 uppercase tracking-[0.15em]">
+          <span className="hidden sm:inline text-gray-300">|</span>
+          <p className="text-xs font-medium text-okoa-dark uppercase tracking-wide">
             Custom Orders Available
           </p>
-          <span className="hidden sm:inline text-gray-300">·</span>
-          <p className="text-[11px] font-medium text-gray-500 uppercase tracking-[0.15em]">
+          <span className="hidden sm:inline text-gray-300">|</span>
+          <p className="text-xs font-medium text-okoa-dark uppercase tracking-wide">
             Order Directly via WhatsApp
           </p>
         </div>
@@ -70,28 +71,13 @@ export default function Home() {
 
       <WhyChooseUs />
 
-      {/* Editorial moment */}
-      <section className="relative h-[55vh] min-h-[420px] overflow-hidden my-4">
-        <Image
-          src="/images/products/mahogany-dining-set-ladder-back.jpg"
-          alt="OKOA Furniture craftsmanship"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40 flex items-center justify-center px-6">
-          <p className="font-[family-name:var(--font-playfair)] text-white text-2xl md:text-4xl font-medium text-center max-w-2xl leading-snug">
-            Every piece is chosen to make a house feel like home.
-          </p>
-        </div>
-      </section>
-
       {/* Shop by Room grid */}
-      <section id="shop-by-room" className="max-w-7xl mx-auto px-4 py-28">
-        <div className="text-center mb-16">
-          <p className="text-okoa-orange text-[11px] font-semibold uppercase tracking-[0.3em] mb-4">
+      <section id="shop-by-room" className="max-w-7xl mx-auto px-4 py-20">
+        <div className="text-center mb-12">
+          <p className="text-okoa-orange text-xs font-semibold uppercase tracking-[0.25em] mb-3">
             Explore
           </p>
-          <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-medium text-okoa-dark">
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-okoa-dark">
             Shop by Room
           </h2>
         </div>
@@ -114,7 +100,7 @@ export default function Home() {
                   />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-                <span className="relative text-lg font-medium text-white tracking-wide">
+                <span className="relative text-lg font-semibold text-white tracking-wide">
                   {room.name}
                 </span>
               </Link>
@@ -124,13 +110,13 @@ export default function Home() {
       </section>
 
       {/* Featured Pieces */}
-      <section className="bg-okoa-cream py-28 px-4">
+      <section className="bg-okoa-cream py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-okoa-orange text-[11px] font-semibold uppercase tracking-[0.3em] mb-4">
+          <div className="text-center mb-12">
+            <p className="text-okoa-orange text-xs font-semibold uppercase tracking-[0.25em] mb-3">
               Handpicked
             </p>
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-medium text-okoa-dark">
+            <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-okoa-dark">
               Featured Pieces
             </h2>
           </div>
@@ -182,7 +168,7 @@ export default function Home() {
             })}
           </div>
 
-          <div className="text-center mt-14">
+          <div className="text-center mt-10">
             <Link
               href="/living-room"
               className="inline-block border border-okoa-dark text-okoa-dark px-8 py-3 rounded-md font-medium text-sm uppercase tracking-wide hover:bg-okoa-dark hover:text-white transition-colors duration-300"
@@ -193,21 +179,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Browse All Furniture */}
+      <section className="max-w-7xl mx-auto px-4 py-20">
+        <div className="text-center mb-12">
+          <p className="text-okoa-orange text-xs font-semibold uppercase tracking-[0.25em] mb-3">
+            Full Collection
+          </p>
+          <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold text-okoa-dark">
+            Browse All Furniture
+          </h2>
+        </div>
+        <ProductFilters items={products} />
+      </section>
+
       {/* Custom Furniture callout */}
-      <section className="bg-okoa-dark text-white py-28 px-4 text-center">
-        <p className="text-okoa-orange text-[11px] font-semibold uppercase tracking-[0.3em] mb-5">
+      <section className="bg-okoa-dark text-white py-20 px-4 text-center">
+        <p className="text-okoa-orange text-xs font-semibold uppercase tracking-[0.25em] mb-4">
           Made For You
         </p>
-        <h2 className="font-[family-name:var(--font-playfair)] text-4xl md:text-5xl font-medium mb-5">
+        <h2 className="font-[family-name:var(--font-playfair)] text-3xl md:text-4xl font-bold mb-4">
           Don&apos;t See What You&apos;re Looking For?
         </h2>
-        <p className="text-gray-400 max-w-lg mx-auto mb-10 text-lg font-light">
+        <p className="text-gray-400 max-w-lg mx-auto mb-8">
           We build custom furniture tailored to your space, style, and
           measurements.
         </p>
         <Link
           href="/custom-furniture"
-          className="inline-block bg-okoa-orange text-white px-9 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-white hover:text-okoa-dark transition-colors duration-300"
+          className="inline-block bg-okoa-orange text-white px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-white hover:text-okoa-dark transition-colors duration-300"
         >
           Explore Custom Furniture
         </Link>

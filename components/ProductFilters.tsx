@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Product } from "@/data/products";
 import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
+import { getAvailabilityLabel, getAvailabilityColor } from "@/lib/availability";
 import { getWhatsAppOrderLink } from "@/lib/whatsapp";
 import { PhoneIcon } from "@/components/icons";
 import { WHATSAPP_NUMBER, SITE_URL } from "@/lib/config";
@@ -133,6 +134,11 @@ export default function ProductFilters({ items }: { items: Product[] }) {
                   </div>
                 </Link>
                 <div className="p-4 pt-2">
+                  <span
+                    className={`inline-block mb-2 text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ${getAvailabilityColor(product)}`}
+                  >
+                    {getAvailabilityLabel(product)}
+                  </span>
                   {product.showPrice && (
                     <div className="mb-3 flex items-center gap-2">
                       <span className="text-okoa-orange font-semibold">

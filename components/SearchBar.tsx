@@ -8,7 +8,7 @@ import { getDisplayPrice } from "@/lib/pricing";
 
 function SearchIcon() {
   return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
       <circle cx="11" cy="11" r="8" />
       <path d="m21 21-4.35-4.35" />
     </svg>
@@ -63,9 +63,10 @@ export default function SearchBar() {
       <button
         onClick={() => setOpen(true)}
         aria-label="Search products"
-        className="p-2 text-okoa-dark hover:text-okoa-orange transition-colors"
+        className="flex items-center gap-2 text-gray-400 hover:border-okoa-orange hover:text-okoa-dark border border-gray-200 rounded-full px-4 py-2 text-sm transition-colors"
       >
         <SearchIcon />
+        <span className="hidden xl:inline">Search furniture...</span>
       </button>
 
       {open && (

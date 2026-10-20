@@ -120,21 +120,24 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
+                <div className="rounded-lg overflow-hidden mb-2 border border-gray-800">
+                  <iframe
+                    src="https://www.google.com/maps?q=-1.209426,36.906214&z=15&output=embed"
+                    width="100%"
+                    height="120"
+                    style={{ border: 0, filter: "grayscale(0.3) invert(0.92) contrast(0.9)" }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="OKOA Furniture location map"
+                  />
+                </div>
                 <a
                   href={MAPS_LINK}
                   target="_blank"
-                  className="flex items-start gap-2 text-gray-300 hover:text-okoa-orange transition-colors"
+                  className="flex items-center gap-2 text-gray-300 hover:text-okoa-orange transition-colors text-sm"
                 >
-                  <span className="mt-0.5">
-                    <MapPinIcon />
-                  </span>
-                  <span>
-                    Roysambu, Nairobi
-                    <br />
-                    <span className="text-okoa-orange text-xs">
-                      Get Directions →
-                    </span>
-                  </span>
+                  <MapPinIcon />
+                  Roysambu, Nairobi — Get Directions →
                 </a>
               </li>
               <li>
