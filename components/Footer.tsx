@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { rooms } from "@/data/categories";
+import { WHATSAPP_NUMBER, PHONE_DISPLAY, MAPS_LINK, SOCIAL_LINKS } from "@/lib/config";
 
 function InstagramIcon() {
   return (
@@ -54,10 +55,10 @@ function MapPinIcon() {
 }
 
 const socialLinks = [
-  { href: "https://wa.me/254711682894", label: "Chat on WhatsApp", icon: WhatsAppIcon },
-  { href: "https://www.instagram.com/okoafurniture", label: "OKOA Furniture on Instagram", icon: InstagramIcon },
-  { href: "https://www.facebook.com/okoafurniture", label: "OKOA Furniture on Facebook", icon: FacebookIcon },
-  { href: "https://www.tiktok.com/@okoafurniture", label: "OKOA Furniture on TikTok", icon: TikTokIcon },
+  { href: `https://wa.me/${WHATSAPP_NUMBER}`, label: "Chat on WhatsApp", icon: WhatsAppIcon },
+  { href: SOCIAL_LINKS.instagram, label: "OKOA Furniture on Instagram", icon: InstagramIcon },
+  { href: SOCIAL_LINKS.facebook, label: "OKOA Furniture on Facebook", icon: FacebookIcon },
+  { href: SOCIAL_LINKS.tiktok, label: "OKOA Furniture on TikTok", icon: TikTokIcon },
 ];
 
 export default function Footer() {
@@ -67,7 +68,6 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-4 pt-16 pb-8">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-x-8 gap-y-12 mb-14">
-          {/* Brand */}
           <div className="md:col-span-5">
             <Image
               src="/images/okoa-logo.png"
@@ -77,7 +77,7 @@ export default function Footer() {
               style={{ height: "auto" }}
               className="mb-5"
             />
-            <p className="text-gray-400 text-sm mb-6 leading-relaxed max-w-xs">
+            <p className="text-gray-300 text-sm mb-6 leading-relaxed max-w-xs">
               The home of modern designs. Quality furniture for every room —
               crafted for comfort, built to last.
             </p>
@@ -96,12 +96,11 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Shop */}
           <div className="md:col-span-4">
-            <h4 className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-5">
+            <h4 className="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-5">
               Shop
             </h4>
-            <ul className="space-y-3 text-sm">
+            <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm">
               {rooms.map((room) => (
                 <li key={room.slug}>
                   <Link
@@ -115,15 +114,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Get in touch */}
           <div className="md:col-span-3">
-            <h4 className="text-xs font-semibold tracking-widest uppercase text-gray-500 mb-5">
+            <h4 className="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-5">
               Get in Touch
             </h4>
             <ul className="space-y-3 text-sm">
               <li>
                 <a
-                  href="https://maps.app.goo.gl/UcyP7UAiBY8td7577"
+                  href={MAPS_LINK}
                   target="_blank"
                   className="flex items-start gap-2 text-gray-300 hover:text-okoa-orange transition-colors"
                 >
@@ -141,16 +139,16 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+254711682894"
+                  href={`tel:+${WHATSAPP_NUMBER}`}
                   className="flex items-center gap-2 text-gray-300 hover:text-okoa-orange transition-colors"
                 >
                   <PhoneIcon />
-                  0711 682 894
+                  {PHONE_DISPLAY}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/254711682894"
+                  href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   className="flex items-center gap-2 text-gray-300 hover:text-okoa-orange transition-colors"
                 >
@@ -171,12 +169,20 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-400">
             © {new Date().getFullYear()} OKOA Furniture. All rights reserved.
           </p>
-          <p className="text-xs text-gray-500">
-            Designed &amp; built by{" "}
-            <span className="text-gray-300">AROKELIX</span>
+          <div className="flex items-center gap-4 text-xs text-gray-400">
+            <Link href="/privacy-policy" className="hover:text-okoa-orange transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-gray-700">|</span>
+            <Link href="/terms" className="hover:text-okoa-orange transition-colors">
+              Terms &amp; Conditions
+            </Link>
+          </div>
+          <p className="text-xs text-gray-400">
+            Designed &amp; built by <span className="text-gray-300">AROKELIX</span>
           </p>
         </div>
       </div>

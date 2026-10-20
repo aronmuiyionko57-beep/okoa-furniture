@@ -4,6 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { rooms } from "@/data/categories";
+import SearchBar from "@/components/SearchBar";
+import { WHATSAPP_NUMBER } from "@/lib/config";
 
 export default function Header() {
   const [openRoom, setOpenRoom] = useState<string | null>(null);
@@ -60,20 +62,24 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA */}
-        <a
-          href="https://wa.me/254711682894"
-          target="_blank"
-          className="hidden lg:inline-block bg-okoa-dark text-white text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded-md hover:bg-okoa-orange transition-colors duration-300"
-        >
-          Order via WhatsApp
-        </a>
+        <div className="hidden lg:flex items-center gap-2">
+          <SearchBar />
+          <a
+            href={`https://wa.me/${WHATSAPP_NUMBER}`}
+            target="_blank"
+            className="bg-okoa-dark text-white text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded-md hover:bg-okoa-orange transition-colors duration-300"
+          >
+            Order via WhatsApp
+          </a>
+        </div>
 
         {/* Mobile hamburger button */}
         <button
           className="lg:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu-panel"
         >
           <span className={`block w-6 h-0.5 bg-okoa-dark transition-transform ${mobileOpen ? "rotate-45 translate-y-2" : ""}`} />
           <span className={`block w-6 h-0.5 bg-okoa-dark transition-opacity ${mobileOpen ? "opacity-0" : ""}`} />
@@ -83,7 +89,7 @@ export default function Header() {
 
       {/* Mobile menu panel */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-gray-100 bg-white">
+        <div id="mobile-menu-panel" className="lg:hidden border-t border-gray-100 bg-white">
           {rooms.map((room) => (
             <div key={room.slug} className="border-b border-gray-100">
               <div className="flex items-center justify-between px-4 py-3">
@@ -125,7 +131,7 @@ export default function Header() {
           ))}
           <div className="p-4">
             <a
-              href="https://wa.me/254711682894"
+              href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
               className="block text-center bg-okoa-dark text-white text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded-md"
             >

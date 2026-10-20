@@ -1,4 +1,4 @@
-const WHATSAPP_NUMBER = "254711682894"; // no + or leading 0
+import { WHATSAPP_NUMBER } from "@/lib/config";
 
 export function getWhatsAppOrderLink(
   productName: string,

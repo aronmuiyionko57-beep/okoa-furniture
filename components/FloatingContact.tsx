@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { WHATSAPP_NUMBER } from "@/lib/config";
 
 function WhatsAppIcon() {
   return (
@@ -28,7 +29,6 @@ function CloseIcon() {
 
 export default function FloatingContact() {
   const [showLabel, setShowLabel] = useState(false);
-  const phoneNumber = "254711682894";
 
   useEffect(() => {
     const timer = setTimeout(() => setShowLabel(true), 1500);
@@ -38,7 +38,7 @@ export default function FloatingContact() {
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
       <a
-        href={`tel:+${phoneNumber}`}
+        href={`tel:+${WHATSAPP_NUMBER}`}
         aria-label="Call us"
         className="w-14 h-14 rounded-full bg-okoa-dark text-white flex items-center justify-center shadow-xl hover:bg-okoa-orange transition-colors duration-200"
       >
@@ -60,7 +60,7 @@ export default function FloatingContact() {
         )}
 
         <a
-          href={`https://wa.me/${phoneNumber}`}
+          href={`https://wa.me/${WHATSAPP_NUMBER}`}
           target="_blank"
           aria-label="Chat on WhatsApp"
           className="w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-xl hover:opacity-90 transition-opacity duration-200 shrink-0"

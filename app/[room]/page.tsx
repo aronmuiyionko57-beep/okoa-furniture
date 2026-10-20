@@ -19,11 +19,16 @@ export async function generateMetadata({
 
   if (!room) return { title: "Not Found | OKOA Furniture" };
 
+  const title = `${room.name} Furniture | OKOA Furniture`;
+  const description = `Shop quality ${room.name.toLowerCase()} furniture at OKOA Furniture — ${room.subcategories
+    .map((s) => s.name.toLowerCase())
+    .join(", ")}. Order directly via WhatsApp.`;
+
   return {
-    title: `${room.name} Furniture | OKOA Furniture`,
-    description: `Shop quality ${room.name.toLowerCase()} furniture at OKOA Furniture — ${room.subcategories
-      .map((s) => s.name.toLowerCase())
-      .join(", ")}. Order directly via WhatsApp.`,
+    title,
+    description,
+    alternates: { canonical: `/${room.slug}` },
+    openGraph: { title, description, url: `/${room.slug}` },
   };
 }
 
@@ -38,7 +43,7 @@ export default async function RoomPage({
   if (!room) return notFound();
 
   return (
-    <main>
+    <main id="main-content">
       {/* Page header */}
       <section className="bg-okoa-dark text-white py-16 px-4 text-center">
         <nav className="text-xs text-gray-400 uppercase tracking-widest mb-4">

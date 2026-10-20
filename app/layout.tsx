@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
+import { SITE_URL } from "@/lib/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,9 +22,29 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "OKOA Furniture | The Home of Modern Designs",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "OKOA Furniture | The Home of Modern Designs",
+    template: "%s",
+  },
   description:
     "Shop modern furniture for every room — living room, bedroom, dining, home office, outdoor, and custom pieces.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  openGraph: {
+    siteName: "OKOA Furniture",
+    type: "website",
+    locale: "en_KE",
+    images: [{ url: "/images/og-image.jpg", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +57,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] bg-okoa-dark text-white px-4 py-2 rounded-md text-sm font-medium"
+        >
+          Skip to main content
+        </a>
         <Header />
         {children}
         <Footer />

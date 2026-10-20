@@ -7,6 +7,7 @@ export interface Product {
   regularPrice: number;
   salePrice?: number;
   showPrice?: boolean;
+  availability?: "available" | "on-order" | "limited" | "unavailable";
   description: string;
   images: string[];
   dimensions?: string;

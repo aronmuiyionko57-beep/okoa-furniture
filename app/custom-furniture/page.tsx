@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { WHATSAPP_NUMBER } from "@/lib/config";
 
 const furnitureTypes = [
   "Sofa",
@@ -32,7 +33,7 @@ export default function CustomFurniturePage() {
   const canSubmit = type !== "";
 
   return (
-    <main>
+    <main id="main-content">
       {/* Page header */}
       <section className="bg-okoa-dark text-white py-16 px-4 text-center">
         <nav className="text-xs text-gray-400 uppercase tracking-widest mb-4">
@@ -55,57 +56,76 @@ export default function CustomFurniturePage() {
       </section>
 
       <div className="max-w-2xl mx-auto px-4 py-16">
-        <div className="bg-white border border-gray-100 rounded-xl shadow-sm p-8">
+        <form
+          className="bg-white border border-gray-100 rounded-xl shadow-sm p-8"
+          onSubmit={(e) => e.preventDefault()}
+        >
           {/* Step 1: Furniture type */}
-          <div className="mb-8">
-            <h2 className="text-xs font-semibold uppercase tracking-widest text-okoa-dark mb-4">
+          <fieldset className="mb-8">
+            <legend className="text-xs font-semibold uppercase tracking-widest text-okoa-dark mb-4">
               1. What are you looking for?
-            </h2>
-            <div className="flex flex-wrap gap-2">
-              {furnitureTypes.map((item) => (
-                <button
-                  key={item}
-                  onClick={() => setType(item)}
-                  className={`px-4 py-2 rounded-md text-sm font-medium border transition-colors duration-200 ${
-                    type === item
-                      ? "bg-okoa-dark text-white border-okoa-dark"
-                      : "border-gray-200 text-gray-600 hover:border-okoa-orange"
-                  }`}
-                >
-                  {item}
-                </button>
-              ))}
+            </legend>
+            <div className="flex flex-wrap gap-2" role="group" aria-label="Furniture type">
+              {furnitureTypes.map((item) => {
+                const selected = type === item;
+                return (
+                  <button
+                    key={item}
+                    type="button"
+                    onClick={() => setType(item)}
+                    aria-pressed={selected}
+                    className={`px-4 py-2 rounded-md text-sm font-medium border-2 transition-colors duration-200 ${
+                      selected
+                        ? "bg-okoa-dark text-white border-okoa-dark"
+                        : "border-gray-200 text-gray-600 hover:border-okoa-orange"
+                    }`}
+                  >
+                    {selected && <span aria-hidden="true">✓ </span>}
+                    {item}
+                  </button>
+                );
+              })}
             </div>
-          </div>
+          </fieldset>
 
           {/* Step 2: Material */}
-          <div className="mb-8">
-            <h2 className="text-xs font-semibold uppercase tracking-widest text-okoa-dark mb-4">
+          <fieldset className="mb-8">
+            <legend className="text-xs font-semibold uppercase tracking-widest text-okoa-dark mb-4">
               2. Preferred material (optional)
-            </h2>
-            <div className="flex flex-wrap gap-2">
-              {materials.map((item) => (
-                <button
-                  key={item}
-                  onClick={() => setMaterial(item)}
-                  className={`px-4 py-2 rounded-md text-sm font-medium border transition-colors duration-200 ${
-                    material === item
-                      ? "bg-okoa-dark text-white border-okoa-dark"
-                      : "border-gray-200 text-gray-600 hover:border-okoa-orange"
-                  }`}
-                >
-                  {item}
-                </button>
-              ))}
+            </legend>
+            <div className="flex flex-wrap gap-2" role="group" aria-label="Preferred material">
+              {materials.map((item) => {
+                const selected = material === item;
+                return (
+                  <button
+                    key={item}
+                    type="button"
+                    onClick={() => setMaterial(item)}
+                    aria-pressed={selected}
+                    className={`px-4 py-2 rounded-md text-sm font-medium border-2 transition-colors duration-200 ${
+                      selected
+                        ? "bg-okoa-dark text-white border-okoa-dark"
+                        : "border-gray-200 text-gray-600 hover:border-okoa-orange"
+                    }`}
+                  >
+                    {selected && <span aria-hidden="true">✓ </span>}
+                    {item}
+                  </button>
+                );
+              })}
             </div>
-          </div>
+          </fieldset>
 
           {/* Step 3: Details */}
           <div className="mb-8">
-            <h2 className="text-xs font-semibold uppercase tracking-widest text-okoa-dark mb-4">
+            <label
+              htmlFor="custom-details"
+              className="block text-xs font-semibold uppercase tracking-widest text-okoa-dark mb-4"
+            >
               3. Tell us more (optional)
-            </h2>
+            </label>
             <textarea
+              id="custom-details"
               value={details}
               onChange={(e) => setDetails(e.target.value)}
               placeholder="Size, color, inspiration, room it's for..."
@@ -117,11 +137,12 @@ export default function CustomFurniturePage() {
           <a
             href={
               canSubmit
-                ? `https://wa.me/254711682894?text=${buildMessage()}`
+                ? `https://wa.me/${WHATSAPP_NUMBER}?text=${buildMessage()}`
                 : undefined
             }
             target="_blank"
             aria-disabled={!canSubmit}
+            tabIndex={canSubmit ? 0 : -1}
             className={`block text-center px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest transition-colors duration-300 ${
               canSubmit
                 ? "bg-okoa-orange text-white hover:bg-okoa-dark cursor-pointer"
@@ -131,11 +152,11 @@ export default function CustomFurniturePage() {
             Send Request via WhatsApp
           </a>
           {!canSubmit && (
-            <p className="text-xs text-gray-400 text-center mt-3">
+            <p className="text-xs text-gray-400 text-center mt-3" role="status">
               Select an item type to continue
             </p>
           )}
-        </div>
+        </form>
       </div>
     </main>
   );

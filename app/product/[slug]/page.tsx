@@ -3,11 +3,13 @@ import { rooms } from "@/data/categories";
 import { notFound } from "next/navigation";
 import { getWhatsAppOrderLink } from "@/lib/whatsapp";
 import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
+import { getAvailabilityLabel, getAvailabilityColor } from "@/lib/availability";
+import { SITE_URL } from "@/lib/config";
 import ProductImageCarousel from "@/components/ProductImageCarousel";
+import { PhoneIcon } from "@/components/icons";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { PhoneIcon } from "@/components/icons";
 
 export async function generateMetadata({
   params,
@@ -22,9 +24,11 @@ export async function generateMetadata({
   return {
     title: `${product.name} | OKOA Furniture`,
     description: product.description,
+    alternates: { canonical: `/product/${product.slug}` },
     openGraph: {
       title: product.name,
       description: product.description,
+      url: `/product/${product.slug}`,
       images:
         product.images[0] !== "/images/placeholder.jpg"
           ? [product.images[0]]
@@ -58,8 +62,72 @@ export default async function ProductPage({
     )
     .slice(0, 4);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.description,
+    image:
+      product.images[0] !== "/images/placeholder.jpg"
+        ? `${SITE_URL}${product.images[0]}`
+        : undefined,
+    offers: product.showPrice
+      ? {
+          "@type": "Offer",
+          priceCurrency: "KES",
+          price: displayPrice,
+          availability: "https://schema.org/InStock",
+          url: `${SITE_URL}/product/${product.slug}`,
+        }
+      : undefined,
+  };
+
+  const breadcrumbItems = [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+    ...(room
+      ? [
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: room.name,
+            item: `${SITE_URL}/${room.slug}`,
+          },
+        ]
+      : []),
+    ...(sub
+      ? [
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: sub.name,
+            item: `${SITE_URL}/${room!.slug}/${sub.slug}`,
+          },
+        ]
+      : []),
+    {
+      "@type": "ListItem",
+      position: sub ? 4 : room ? 3 : 2,
+      name: product.name,
+    },
+  ];
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: breadcrumbItems,
+  };
+
   return (
-    <main>
+    <main id="main-content">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* Breadcrumb */}
       <div className="bg-okoa-cream py-4 px-4">
         <nav className="max-w-6xl mx-auto text-xs text-gray-500 uppercase tracking-widest">
@@ -109,7 +177,7 @@ export default async function ProductPage({
           </h1>
 
           {product.showPrice && (
-            <div className="mb-6 flex items-center gap-3">
+            <div className="mb-3 flex items-center gap-3">
               <span className="text-2xl text-okoa-orange font-semibold">
                 KSh {displayPrice.toLocaleString()}
               </span>
@@ -120,6 +188,12 @@ export default async function ProductPage({
               )}
             </div>
           )}
+
+          <span
+            className={`inline-block mb-6 text-xs font-semibold uppercase tracking-wide px-3 py-1 rounded-full ${getAvailabilityColor(product)}`}
+          >
+            {getAvailabilityLabel(product)}
+          </span>
 
           <p className="text-gray-600 mb-8 leading-relaxed">
             {product.description}
@@ -147,24 +221,25 @@ export default async function ProductPage({
           )}
 
           <div className="flex flex-col sm:flex-row gap-3">
-  <a
-    href={getWhatsAppOrderLink(
-      product.name,
-      product.showPrice ? displayPrice : undefined
-    )}
-    target="_blank"
-    className="inline-flex items-center justify-center gap-2 bg-okoa-dark text-white px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-okoa-orange transition-colors duration-300"
-  >
-    Order via WhatsApp
-  </a>
-  <a
-    href="tel:+254711682894"
-    className="inline-flex items-center justify-center gap-2 border border-gray-300 text-okoa-dark px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:border-okoa-dark transition-colors duration-300"
-  >
-    <PhoneIcon />
-    Call Us
-  </a>
-</div>
+            <a
+              href={getWhatsAppOrderLink(
+                product.name,
+                product.showPrice ? displayPrice : undefined,
+                `${SITE_URL}/product/${product.slug}`
+              )}
+              target="_blank"
+              className="inline-flex items-center justify-center gap-2 bg-okoa-dark text-white px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-okoa-orange transition-colors duration-300"
+            >
+              Order via WhatsApp
+            </a>
+            <a
+              href="tel:+254711682894"
+              className="inline-flex items-center justify-center gap-2 border border-gray-300 text-okoa-dark px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:border-okoa-dark transition-colors duration-300"
+            >
+              <PhoneIcon />
+              Call Us
+            </a>
+          </div>
         </div>
       </div>
 
