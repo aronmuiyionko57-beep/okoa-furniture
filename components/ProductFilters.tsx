@@ -53,12 +53,12 @@ export default function ProductFilters({ items }: { items: Product[] }) {
 
   return (
     <div>
-      <div className="flex flex-wrap items-center gap-3 mb-8 pb-6 border-b border-gray-100">
+      <div className="flex flex-wrap items-center gap-3 mb-8 pb-6 border-b border-okoa-border">
         <select
           value={priceRange}
           onChange={(e) => setPriceRange(Number(e.target.value))}
           aria-label="Filter by price"
-          className="border border-gray-200 rounded-md px-3 py-2 text-sm text-okoa-dark focus:outline-none focus:border-okoa-orange"
+          className="bg-okoa-white border border-okoa-border rounded-md px-3 py-2 text-sm text-okoa-dark focus:outline-none focus:border-okoa-orange"
         >
           {PRICE_RANGES.map((r, i) => (
             <option key={r.label} value={i}>
@@ -67,7 +67,7 @@ export default function ProductFilters({ items }: { items: Product[] }) {
           ))}
         </select>
 
-        <label className="flex items-center gap-2 text-sm text-okoa-dark cursor-pointer border border-gray-200 rounded-md px-3 py-2">
+        <label className="flex items-center gap-2 text-sm text-okoa-dark cursor-pointer bg-okoa-white border border-okoa-border rounded-md px-3 py-2">
           <input
             type="checkbox"
             checked={onSaleOnly}
@@ -81,7 +81,7 @@ export default function ProductFilters({ items }: { items: Product[] }) {
           value={sort}
           onChange={(e) => setSort(e.target.value)}
           aria-label="Sort products"
-          className="border border-gray-200 rounded-md px-3 py-2 text-sm text-okoa-dark focus:outline-none focus:border-okoa-orange ml-auto"
+          className="bg-okoa-white border border-okoa-border rounded-md px-3 py-2 text-sm text-okoa-dark focus:outline-none focus:border-okoa-orange ml-auto"
         >
           {SORT_OPTIONS.map((opt) => (
             <option key={opt.value} value={opt.value}>
@@ -105,10 +105,10 @@ export default function ProductFilters({ items }: { items: Product[] }) {
             return (
               <div
                 key={product.id}
-                className="group bg-white rounded-xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-500"
+                className="group bg-okoa-white rounded-xl overflow-hidden border border-okoa-border hover:shadow-xl transition-all duration-500"
               >
                 <Link href={`/product/${product.slug}`}>
-                  <div className="bg-okoa-cream aspect-square relative overflow-hidden">
+                  <div className="bg-okoa-white aspect-square relative overflow-hidden">
                     {onSale && (
                       <span className="absolute top-2 right-2 z-10 bg-okoa-orange text-white text-[11px] font-bold uppercase tracking-wide px-2.5 py-1 rounded-full shadow-md">
                         Offer {discount}%
@@ -166,7 +166,7 @@ export default function ProductFilters({ items }: { items: Product[] }) {
                     <a
                       href={`tel:+${WHATSAPP_NUMBER}`}
                       aria-label="Call us"
-                      className="shrink-0 w-11 flex items-center justify-center border border-gray-200 rounded-md text-okoa-dark hover:border-okoa-dark hover:bg-okoa-dark hover:text-white transition-colors duration-300"
+                      className="shrink-0 w-11 flex items-center justify-center border border-okoa-border rounded-md text-okoa-dark hover:border-okoa-dark hover:bg-okoa-dark hover:text-white transition-colors duration-300"
                     >
                       <PhoneIcon />
                     </a>

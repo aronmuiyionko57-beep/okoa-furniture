@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f3eee7;
   --foreground: #171717;
 }
 
@@ -12,9 +12,11 @@
   --font-mono: var(--font-geist-mono);
   --font-playfair: var(--font-playfair);
 
-  --color-okoa-orange: #f7941d;
-  --color-okoa-dark: #1a1a1a;
-  --color-okoa-cream: #fafafa;
+  --color-okoa-orange: #f26a21;
+  --color-okoa-dark: #171717;
+  --color-okoa-cream: #f3eee7;
+  --color-okoa-white: #ffffff;
+  --color-okoa-border: #e5ded5;
 }
 
 body {

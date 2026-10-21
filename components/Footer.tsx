@@ -100,7 +100,7 @@ export default function Footer() {
             <h4 className="text-xs font-semibold tracking-widest uppercase text-gray-400 mb-5">
               Shop
             </h4>
-            <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm">
+            <ul className="space-y-3 text-sm">
               {rooms.map((room) => (
                 <li key={room.slug}>
                   <Link
