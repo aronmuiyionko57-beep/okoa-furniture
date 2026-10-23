@@ -29,7 +29,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-8 h-full">
+        <nav className="hidden lg:flex items-center gap-6 h-full flex-nowrap overflow-x-auto">
           {rooms.map((room) => (
             <div
               key={room.slug}
