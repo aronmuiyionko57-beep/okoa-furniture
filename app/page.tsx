@@ -13,6 +13,7 @@ const roomImages: Record<string, string> = {
   bedroom: "/images/products/linear-bed-6x6.jpg",
   "dining-room": "/images/products/mahogany-dining-set-ladder-back.jpg",
   "home-office": "/images/products/study-desk-wood.jpg",
+  "tv-area": "/images/products/fireplace-tv-stand-6ft.jpg",
 };
 
 const featuredSlugs = [

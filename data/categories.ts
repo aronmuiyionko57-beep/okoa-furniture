@@ -14,9 +14,11 @@ export const rooms: Room[] = [
     slug: "living-room",
     name: "Living Room",
     subcategories: [
-      { slug: "sofas-sectionals", name: "Sofas & Sectionals" },
+      { slug: "sofas", name: "Sofas" },
+      { slug: "sectionals", name: "Sectionals" },
       { slug: "armchairs", name: "Armchairs" },
       { slug: "recliners", name: "Recliners" },
+      { slug: "semi-recliners", name: "Semi-Recliners" },
       { slug: "sofa-beds", name: "Sofa Beds" },
       { slug: "coffee-tables", name: "Coffee Tables" },
       { slug: "console-tables", name: "Console Tables" },
@@ -30,10 +32,7 @@ export const rooms: Room[] = [
     name: "Bedroom",
     subcategories: [
       { slug: "beds", name: "Beds" },
-      { slug: "bedside-cabinets", name: "Bedside Cabinets" },
       { slug: "mattresses", name: "Mattresses" },
-      { slug: "ottomans", name: "Ottomans" },
-      { slug: "bedroom-mirrors", name: "Bedroom Mirrors" },
     ],
   },
   {
@@ -64,6 +63,15 @@ export const rooms: Room[] = [
       { slug: "outdoor-dining-sets", name: "Outdoor Dining Sets" },
       { slug: "outdoor-tables", name: "Outdoor Tables" },
       { slug: "outdoor-lounge-furniture", name: "Outdoor Lounge Furniture" },
+    ],
+  },
+  {
+    slug: "tv-area",
+    name: "TV Area",
+    subcategories: [
+      { slug: "tv-stands", name: "TV Stands" },
+      { slug: "tv-units", name: "TV Units" },
+      { slug: "entertainment-centers", name: "Entertainment Centers" },
     ],
   },
   {
