@@ -200,7 +200,7 @@ export default async function ProductPage({
           </p>
 
           {(product.dimensions || product.material) && (
-            <div className="mb-8 border-t border-gray-100 pt-6 space-y-3 text-sm">
+            <div className="mb-8 border-t border-okoa-border pt-6 space-y-3 text-sm">
               {product.dimensions && (
                 <div className="flex gap-2">
                   <span className="font-semibold text-okoa-dark uppercase tracking-wide text-xs w-24 shrink-0 pt-0.5">
@@ -260,9 +260,9 @@ export default async function ProductPage({
                   <Link
                     key={item.id}
                     href={`/product/${item.slug}`}
-                    className="group bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+                    className="group bg-okoa-white rounded-lg overflow-hidden border border-okoa-border hover:shadow-lg transition-shadow duration-300"
                   >
-                    <div className="relative aspect-square bg-white overflow-hidden">
+                    <div className="relative aspect-square bg-okoa-white overflow-hidden">
                       {itemOnSale && (
                         <span className="absolute top-2 right-2 z-10 bg-okoa-orange text-white text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full">
                           Offer {itemDiscount}%

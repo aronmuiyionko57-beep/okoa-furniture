@@ -61,7 +61,7 @@ export default function HeroCarousel() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#shop-by-room"
-                className="inline-block bg-okoa-orange text-white px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-white hover:text-okoa-dark transition-colors duration-300"
+                className="inline-block bg-okoa-orange text-white px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-okoa-white hover:text-okoa-dark transition-colors duration-300"
               >
                 Shop by Room
               </a>

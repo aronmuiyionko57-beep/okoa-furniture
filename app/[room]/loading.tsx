@@ -2,8 +2,8 @@ export default function Loading() {
   return (
     <main>
       <section className="bg-okoa-dark py-16 px-4 text-center">
-        <div className="h-3 w-40 bg-white/10 rounded mx-auto mb-4 animate-pulse" />
-        <div className="h-8 w-56 bg-white/10 rounded mx-auto animate-pulse" />
+        <div className="h-3 w-40 bg-okoa-white/10 rounded mx-auto mb-4 animate-pulse" />
+        <div className="h-8 w-56 bg-okoa-white/10 rounded mx-auto animate-pulse" />
       </section>
 
       <div className="max-w-7xl mx-auto px-4 py-16">

@@ -57,7 +57,7 @@ export default function CustomFurniturePage() {
 
       <div className="max-w-2xl mx-auto px-4 py-16">
         <form
-          className="bg-white border border-gray-100 rounded-xl shadow-sm p-8"
+          className="bg-okoa-white border border-okoa-border rounded-xl shadow-sm p-8"
           onSubmit={(e) => e.preventDefault()}
         >
           {/* Step 1: Furniture type */}
@@ -77,7 +77,7 @@ export default function CustomFurniturePage() {
                     className={`px-4 py-2 rounded-md text-sm font-medium border-2 transition-colors duration-200 ${
                       selected
                         ? "bg-okoa-dark text-white border-okoa-dark"
-                        : "border-gray-200 text-gray-600 hover:border-okoa-orange"
+                        : "border-okoa-border text-gray-600 hover:border-okoa-orange"
                     }`}
                   >
                     {selected && <span aria-hidden="true">✓ </span>}
@@ -105,7 +105,7 @@ export default function CustomFurniturePage() {
                     className={`px-4 py-2 rounded-md text-sm font-medium border-2 transition-colors duration-200 ${
                       selected
                         ? "bg-okoa-dark text-white border-okoa-dark"
-                        : "border-gray-200 text-gray-600 hover:border-okoa-orange"
+                        : "border-okoa-border text-gray-600 hover:border-okoa-orange"
                     }`}
                   >
                     {selected && <span aria-hidden="true">✓ </span>}
@@ -130,7 +130,7 @@ export default function CustomFurniturePage() {
               onChange={(e) => setDetails(e.target.value)}
               placeholder="Size, color, inspiration, room it's for..."
               rows={4}
-              className="w-full border border-gray-200 rounded-md p-3 text-sm text-okoa-dark focus:outline-none focus:border-okoa-orange transition-colors resize-none"
+              className="w-full border border-okoa-border rounded-md p-3 text-sm text-okoa-dark focus:outline-none focus:border-okoa-orange transition-colors resize-none"
             />
           </div>
 

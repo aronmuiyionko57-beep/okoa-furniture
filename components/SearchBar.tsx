@@ -63,7 +63,7 @@ export default function SearchBar() {
       <button
         onClick={() => setOpen(true)}
         aria-label="Search products"
-        className="flex items-center gap-2 text-gray-400 hover:border-okoa-orange hover:text-okoa-dark border border-gray-200 rounded-full px-4 py-2 text-sm transition-colors"
+        className="flex items-center gap-2 text-gray-400 hover:border-okoa-orange hover:text-okoa-dark border border-okoa-border rounded-full px-4 py-2 text-sm transition-colors"
       >
         <SearchIcon />
         <span className="hidden xl:inline">Search furniture...</span>
@@ -76,8 +76,8 @@ export default function SearchBar() {
           aria-modal="true"
           aria-label="Search products"
         >
-          <div className="bg-white rounded-lg shadow-2xl w-full max-w-xl overflow-hidden">
-            <div className="flex items-center gap-3 border-b border-gray-100 px-4 py-3">
+          <div className="bg-okoa-white rounded-lg shadow-2xl w-full max-w-xl overflow-hidden">
+            <div className="flex items-center gap-3 border-b border-okoa-border px-4 py-3">
               <SearchIcon />
               <input
                 ref={inputRef}

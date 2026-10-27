@@ -54,7 +54,7 @@ export default function Home() {
       <HeroCarousel />
 
       {/* Trust bar */}
-      <section className="bg-okoa-cream py-5 px-4 border-b border-gray-200">
+      <section className="bg-okoa-cream py-5 px-4 border-b border-okoa-border">
         <div className="max-w-5xl mx-auto flex flex-wrap justify-center items-center gap-x-8 gap-y-2 text-center">
           <p className="text-xs font-medium text-okoa-dark uppercase tracking-wide">
             Quality Craftsmanship
@@ -132,9 +132,9 @@ export default function Home() {
                 <Link
                   key={product.id}
                   href={`/product/${product.slug}`}
-                  className="group bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+                  className="group bg-okoa-white rounded-lg overflow-hidden border border-okoa-border hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="relative aspect-square bg-white overflow-hidden">
+                  <div className="relative aspect-square bg-okoa-white overflow-hidden">
                     {onSale && (
                       <span className="absolute top-2 right-2 z-10 bg-okoa-orange text-white text-[10px] font-bold uppercase tracking-wide px-2 py-1 rounded-full">
                         Offer {discount}%
@@ -207,7 +207,7 @@ export default function Home() {
         </p>
         <Link
           href="/custom-furniture"
-          className="inline-block bg-okoa-orange text-white px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-white hover:text-okoa-dark transition-colors duration-300"
+          className="inline-block bg-okoa-orange text-white px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-okoa-white hover:text-okoa-dark transition-colors duration-300"
         >
           Explore Custom Furniture
         </Link>

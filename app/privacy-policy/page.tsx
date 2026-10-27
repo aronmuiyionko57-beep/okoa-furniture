@@ -71,7 +71,7 @@ export default function PrivacyPolicyPage() {
           </p>
         </div>
 
-        <p className="text-xs text-gray-400 pt-4 border-t border-gray-100">
+        <p className="text-xs text-gray-400 pt-4 border-t border-okoa-border">
           Last updated: October 2026
         </p>
       </div>

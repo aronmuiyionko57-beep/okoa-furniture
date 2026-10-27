@@ -13,7 +13,7 @@ export default function Header() {
   const [mobileRoomOpen, setMobileRoomOpen] = useState<string | null>(null);
 
   return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-50">
+    <header className="bg-okoa-white border-b border-okoa-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-24">
         <Link href="/" className="flex items-center h-24" onClick={() => setMobileOpen(false)}>
           <div className="relative w-48 h-16">
@@ -46,7 +46,7 @@ export default function Header() {
               </Link>
 
               {room.subcategories.length > 0 && openRoom === room.slug && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 bg-white shadow-xl rounded-lg py-4 min-w-[240px] border-t-2 border-okoa-orange">
+                <div className="absolute top-full left-1/2 -translate-x-1/2 bg-okoa-white shadow-xl rounded-lg py-4 min-w-[240px] border-t-2 border-okoa-orange">
                   {room.subcategories.map((sub) => (
                     <Link
                       key={sub.slug}
@@ -89,9 +89,9 @@ export default function Header() {
 
       {/* Mobile menu panel */}
       {mobileOpen && (
-        <div id="mobile-menu-panel" className="lg:hidden border-t border-gray-100 bg-white">
+        <div id="mobile-menu-panel" className="lg:hidden border-t border-okoa-border bg-okoa-white">
           {rooms.map((room) => (
-            <div key={room.slug} className="border-b border-gray-100">
+            <div key={room.slug} className="border-b border-okoa-border">
               <div className="flex items-center justify-between px-4 py-3">
                 <Link
                   href={`/${room.slug}`}

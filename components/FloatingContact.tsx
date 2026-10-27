@@ -47,7 +47,7 @@ export default function FloatingContact() {
 
       <div className="relative flex items-center gap-2">
         {showLabel && (
-          <div className="flex items-center gap-1.5 bg-white text-okoa-dark text-sm font-medium pl-3 pr-2 py-2 rounded-full shadow-lg animate-in fade-in slide-in-from-right-2 duration-500">
+          <div className="flex items-center gap-1.5 bg-okoa-white text-okoa-dark text-sm font-medium pl-3 pr-2 py-2 rounded-full shadow-lg animate-in fade-in slide-in-from-right-2 duration-500">
             <span>Chat with us</span>
             <button
               onClick={() => setShowLabel(false)}
