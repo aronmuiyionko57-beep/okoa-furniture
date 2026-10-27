@@ -75,9 +75,8 @@ export default function ProductImageCarousel({
         {images.map((src, i) => (
           <div
             key={src}
-            className={`absolute inset-0 transition-opacity duration-700 ${
-              i === active ? "opacity-100" : "opacity-0"
-            }`}
+            className="absolute inset-0 transition-transform duration-700 ease-in-out"
+            style={{ transform: `translateX(${(i - active) * 100}%)` }}
           >
             <Image
               src={src}
@@ -140,13 +139,21 @@ export default function ProductImageCarousel({
             </>
           )}
 
-          <div className="relative w-full h-full max-w-4xl max-h-[85vh]">
-            <Image
-              src={images[active]}
-              alt={`${name} — image ${active + 1}`}
-              fill
-              className="object-contain"
-            />
+          <div className="relative w-full h-full max-w-4xl max-h-[85vh] overflow-hidden">
+            {images.map((src, i) => (
+              <div
+                key={src}
+                className="absolute inset-0 transition-transform duration-700 ease-in-out"
+                style={{ transform: `translateX(${(i - active) * 100}%)` }}
+              >
+                <Image
+                  src={src}
+                  alt={`${name} — image ${i + 1}`}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            ))}
           </div>
 
           {images.length > 1 && (

@@ -38,13 +38,14 @@ export default function HeroCarousel() {
       {slides.map((slide, i) => (
         <div
           key={i}
-          className={`absolute inset-0 flex items-center justify-center text-center px-4 transition-opacity duration-1000 ${
-            i === active ? "opacity-100 z-10" : "opacity-0 z-0"
+          className={`absolute inset-0 flex items-center justify-center text-center px-4 transition-transform duration-700 ease-in-out ${
+            i === active ? "z-10" : "z-0"
           }`}
           style={{
             backgroundImage: `url(${slide.image})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
+            transform: `translateX(${(i - active) * 100}%)`,
           }}
         >
           <div className="absolute inset-0 bg-black/50" />
