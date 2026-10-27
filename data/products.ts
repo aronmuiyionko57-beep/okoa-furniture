@@ -16,20 +16,6 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: "1",
-    slug: "modern-3-seater-sofa",
-    name: "Modern 3-Seater Sofa",
-    room: "living-room",
-    subcategory: "sofas",
-    regularPrice: 45000,
-    showPrice: false,
-    description:
-      "A comfortable, contemporary 3-seater sofa with clean lines, built for everyday living.",
-    images: ["/images/placeholder.jpg"],
-    dimensions: "200cm x 90cm x 85cm",
-    material: "Fabric upholstery, solid wood frame",
-  },
-  {
     id: "2",
     slug: "linear-bed-6x6",
     name: "Linear Design Bed",
@@ -859,7 +845,7 @@ export const products: Product[] = [
   {
     id: "59",
     slug: "floating-tv-unit-fluted-panel",
-    name: "Floating Tv Unit Fluted Panel",
+    name: "Floating TV Unit Fluted Panel",
     room: "tv-area",
     subcategory: "tv-units",
     regularPrice: 68500,
@@ -1149,7 +1135,7 @@ export const products: Product[] = [
   {
     id: "79",
     slug: "tv-unit-marble-panel",
-    name: "Tv Unit Marble Panel",
+    name: "TV Unit Marble Panel",
     room: "tv-area",
     subcategory: "tv-units",
     regularPrice: 67000,
@@ -1163,7 +1149,7 @@ export const products: Product[] = [
   {
     id: "80",
     slug: "black-tv-unit-marble-panel",
-    name: "Black Tv Unit Marble Panel",
+    name: "Black TV Unit Marble Panel",
     room: "tv-area",
     subcategory: "tv-units",
     regularPrice: 117100,
@@ -1192,7 +1178,7 @@ export const products: Product[] = [
   {
     id: "82",
     slug: "white-tv-unit-backlit-panel",
-    name: "White Tv Unit Backlit Panel",
+    name: "White TV Unit Backlit Panel",
     room: "tv-area",
     subcategory: "tv-units",
     regularPrice: 104000,
@@ -1207,7 +1193,7 @@ export const products: Product[] = [
   {
     id: "83",
     slug: "tv-unit-wood-shelving-marble",
-    name: "Tv Unit Wood Shelving Marble",
+    name: "TV Unit Wood Shelving Marble",
     room: "tv-area",
     subcategory: "tv-units",
     regularPrice: 85000,
@@ -1221,7 +1207,7 @@ export const products: Product[] = [
   {
     id: "84",
     slug: "fireplace-tv-unit-fluted-panel",
-    name: "Fireplace Tv Unit Fluted Panel",
+    name: "Fireplace TV Unit Fluted Panel",
     room: "tv-area",
     subcategory: "tv-units",
     regularPrice: 87700,
@@ -1236,7 +1222,7 @@ export const products: Product[] = [
   {
     id: "85",
     slug: "grey-wood-fluted-tv-unit",
-    name: "Grey Wood Fluted Tv Unit",
+    name: "Grey Wood Fluted TV Unit",
     room: "tv-area",
     subcategory: "tv-units",
     regularPrice: 89000,
@@ -1250,7 +1236,7 @@ export const products: Product[] = [
   {
     id: "86",
     slug: "white-tv-unit-dual-shelving",
-    name: "White Tv Unit Dual Shelving",
+    name: "White TV Unit Dual Shelving",
     room: "tv-area",
     subcategory: "tv-units",
     regularPrice: 126700,
@@ -1265,7 +1251,7 @@ export const products: Product[] = [
   {
     id: "87",
     slug: "beige-tv-unit-blue-led-panel",
-    name: "Beige Tv Unit Blue Led Panel",
+    name: "Beige TV Unit Blue LED Panel",
     room: "tv-area",
     subcategory: "tv-units",
     regularPrice: 68000,
