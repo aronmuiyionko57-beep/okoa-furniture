@@ -45,6 +45,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
   },
+  // Paste the verification code from Google Search Console here once you've
+  // added the property (Settings > Ownership verification > HTML tag method):
+  // verification: { google: "paste-the-code-here" },
 };
 
 export default function RootLayout({

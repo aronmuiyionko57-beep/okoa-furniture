@@ -3,7 +3,7 @@ import Image from "next/image";
 import { rooms } from "@/data/categories";
 import { products } from "@/data/products";
 import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
-import { SITE_URL, WHATSAPP_NUMBER, SOCIAL_LINKS } from "@/lib/config";
+import { SITE_URL, WHATSAPP_NUMBER, BUSINESS_EMAIL, SOCIAL_LINKS } from "@/lib/config";
 import HeroCarousel from "@/components/HeroCarousel";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ProductFilters from "@/components/ProductFilters";
@@ -36,11 +36,17 @@ export default function Home() {
       "Quality modern furniture for every room — living room, bedroom, dining, home office, outdoor, and custom pieces.",
     url: SITE_URL,
     telephone: `+${WHATSAPP_NUMBER}`,
+    email: BUSINESS_EMAIL,
     address: {
       "@type": "PostalAddress",
       addressLocality: "Roysambu",
       addressRegion: "Nairobi",
       addressCountry: "KE",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -1.209426,
+      longitude: 36.906214,
     },
     sameAs: [SOCIAL_LINKS.instagram, SOCIAL_LINKS.tiktok, SOCIAL_LINKS.facebook],
   };
