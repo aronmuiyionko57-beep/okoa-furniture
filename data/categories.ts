@@ -22,7 +22,6 @@ export const rooms: Room[] = [
       { slug: "sofa-beds", name: "Sofa Beds" },
       { slug: "coffee-tables", name: "Coffee Tables" },
       { slug: "console-tables", name: "Console Tables" },
-      { slug: "tv-stands", name: "TV Stands" },
       { slug: "ottomans", name: "Ottomans" },
       { slug: "mirrors", name: "Mirrors" },
     ],
@@ -71,7 +70,6 @@ export const rooms: Room[] = [
     subcategories: [
       { slug: "tv-stands", name: "TV Stands" },
       { slug: "tv-units", name: "TV Units" },
-      { slug: "entertainment-centers", name: "Entertainment Centers" },
     ],
   },
   {
