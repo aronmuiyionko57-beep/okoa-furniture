@@ -1316,7 +1316,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A gold-framed arched leaning mirror for an elegant accent against any wall.",
-    images: ["/images/products/arched-gold-leaning-mirror.jpg"],
+    images: ["/images/products/gold-arched-leaning-mirror.jpg"],
     dimensions: "3ft x 6ft",
     material: "Glass mirror, gold metal frame",
   },
@@ -1331,7 +1331,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A playful bear-silhouette mirror with a black frame, a fun statement piece for a bedroom or playroom.",
-    images: ["/images/products/bear-shaped-mirror-black.jpg"],
+    images: ["/images/products/bear-shaped-mirror.jpg"],
     dimensions: "Decorative wall mirror",
     material: "Glass mirror, black metal frame",
   },
@@ -1345,7 +1345,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A set of two irregular wavy-outline mirrors with sleek black frames for a modern accent wall display.",
-    images: ["/images/products/wavy-freeform-mirror-pair-set.jpg"],
+    images: ["/images/products/wavy-freeform-mirror-set.jpg"],
     dimensions: "Set of 2 decorative wall mirrors",
     material: "Glass mirror, black metal frame",
   },
@@ -1360,7 +1360,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A black-framed window-pane grid mirror, dividing the glass into panes for a classic architectural look.",
-    images: ["/images/products/window-pane-grid-mirror-black.jpg"],
+    images: ["/images/products/window-pane-grid-mirror.jpg"],
     dimensions: "Decorative wall mirror",
     material: "Glass mirror, black metal frame",
   },
@@ -1374,7 +1374,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A 6-piece clustered set of oval and round mirrors in black frames, arranged for a striking accent-wall display.",
-    images: ["/images/products/clustered-mirror-set-oval-round-black-6pc.jpg"],
+    images: ["/images/products/mixed-shape-mirror-gallery-set.jpg"],
     dimensions: "Set of 6, varying sizes",
     material: "Glass mirror, black metal frame",
   },
@@ -1389,7 +1389,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A 6-piece clustered set of oval and round mirrors in silver frames, arranged for a striking accent-wall display.",
-    images: ["/images/products/clustered-mirror-set-oval-round-silver-6pc.jpg"],
+    images: ["/images/products/silver-framed-mirror-gallery-set.jpg"],
     dimensions: "Set of 6, varying sizes",
     material: "Glass mirror, silver metal frame",
   },
@@ -1403,7 +1403,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "An arched full-length floor mirror with built-in purple/pink LED backlighting for a vibrant glow.",
-    images: ["/images/products/arched-led-floor-mirror-purple.jpg"],
+    images: ["/images/products/arched-led-floor-mirror.jpg"],
     dimensions: "30in x 72in",
     material: "Glass mirror, metal frame, LED backlight",
   },
@@ -1432,7 +1432,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A wavy organic-shaped mirror with white LED backlighting, controllable via remote.",
-    images: ["/images/products/wavy-organic-led-mirror-white-remote.jpg"],
+    images: ["/images/products/wavy-organic-led-mirror.jpg"],
     dimensions: "Decorative wall mirror",
     material: "Glass mirror, metal frame, LED backlight",
   },
@@ -1447,7 +1447,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "An Africa continent-shaped mirror with warm amber LED backlighting, a bold statement piece.",
-    images: ["/images/products/africa-shaped-mirror-amber-led.jpg"],
+    images: ["/images/products/africa-shaped-mirror-amber.jpg"],
     dimensions: "Decorative wall mirror",
     material: "Glass mirror, metal frame, LED backlight",
   },
@@ -1461,7 +1461,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A minimal arched full-length mirror with a thin black frame for a clean, modern look.",
-    images: ["/images/products/minimal-arched-mirror-24x72-plain.jpg"],
+    images: ["/images/products/minimal-arched-mirror-thin-frame.jpg"],
     dimensions: "24in x 72in",
     material: "Glass mirror, black metal frame",
   },
@@ -1476,7 +1476,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A minimal arched full-length mirror with a thin black frame, tall format for a statement reflection.",
-    images: ["/images/products/minimal-arched-mirror-thin-frame-tall-24x74.jpg"],
+    images: ["/images/products/minimal-arched-mirror-thin-frame-tall.jpg"],
     dimensions: "24in x 74in",
     material: "Glass mirror, black metal frame",
   },
@@ -1490,7 +1490,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A sculptural hourglass/pear-shaped mirror with a thin black frame for a modern accent.",
-    images: ["/images/products/hourglass-pear-shaped-mirror.jpg"],
+    images: ["/images/products/hourglass-organic-mirror.jpg"],
     dimensions: "Decorative wall mirror",
     material: "Glass mirror, black metal frame",
   },
@@ -1505,7 +1505,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A wavy-outline mirror in a gold frame with blue LED backlighting for a striking glow.",
-    images: ["/images/products/gold-framed-wavy-led-mirror-blue.jpg"],
+    images: ["/images/products/gold-framed-wavy-led-mirror.jpg"],
     dimensions: "Decorative wall mirror",
     material: "Glass mirror, gold metal frame, LED backlight",
   },
@@ -1519,7 +1519,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A teardrop-shaped mirror with built-in LED backlighting for a soft decorative glow.",
-    images: ["/images/products/teardrop-shaped-led-mirror.jpg"],
+    images: ["/images/products/teardrop-led-mirror.jpg"],
     dimensions: "Decorative wall mirror",
     material: "Glass mirror, metal frame, LED backlight",
   },
@@ -1534,7 +1534,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A rounded-rectangle mirror with warm LED backlighting for a soft ambient glow.",
-    images: ["/images/products/rounded-rectangle-warm-led-mirror.jpg"],
+    images: ["/images/products/rounded-rectangle-led-mirror.jpg"],
     dimensions: "Decorative wall mirror",
     material: "Glass mirror, metal frame, LED backlight",
   },
