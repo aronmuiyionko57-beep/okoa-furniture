@@ -5,6 +5,7 @@ import { products } from "@/data/products";
 import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import { SITE_URL, WHATSAPP_NUMBER, BUSINESS_EMAIL, SOCIAL_LINKS } from "@/lib/config";
 import HeroCarousel from "@/components/HeroCarousel";
+import PromoTicker from "@/components/PromoTicker";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import ProductFilters from "@/components/ProductFilters";
 
@@ -57,6 +58,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
+      <PromoTicker />
       <HeroCarousel />
 
       {/* Trust bar */}
