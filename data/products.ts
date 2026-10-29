@@ -1916,7 +1916,7 @@ export const products: Product[] = [
     availability: "on-order",
     description:
       "A white wooden baby cot with heart cut-outs on the headboard, safety rails on both sides and roomy storage drawers underneath.",
-    images: ["/images/products/baby-cot-heart-design-storage-drawers.jpg"],
+    images: ["/images/products/baby-cot-white-heart-design.jpg"],
     dimensions: "Baby cot with under-bed drawers",
     material: "Painted wood",
   },
@@ -1931,7 +1931,7 @@ export const products: Product[] = [
     availability: "on-order",
     description:
       "A white wooden baby cot with a safety side rail, slatted ends and two storage drawers underneath.",
-    images: ["/images/products/baby-cot-side-rail-storage-drawers.jpg"],
+    images: ["/images/products/baby-cot-white-slatted-rails.jpg"],
     dimensions: "Baby cot with under-bed drawers",
     material: "Painted wood",
   },
@@ -1946,7 +1946,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A slim white console table with a ribbed front and bold black triple-bar metal legs.",
-    images: ["/images/products/white-console-table-black-triple-legs.jpg"],
+    images: ["/images/products/white-fluted-console-table-black-legs.jpg"],
     dimensions: "Slim console",
     material: "Painted wood top, black metal legs",
   },
@@ -1960,7 +1960,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A statement console with a black marble-look top, an inverted-triangle base and gold metal bars on a gold plinth.",
-    images: ["/images/products/black-marble-v-base-console-table-gold.jpg"],
+    images: ["/images/products/black-marble-gold-console-table-v-base.jpg"],
     dimensions: "Console table",
     material: "Marble-look top, gold-finished metal",
   },
@@ -1975,7 +1975,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A brown wood console table with a three-panel front and fluted side panels, a warm classic piece for a hallway or sitting room.",
-    images: ["/images/products/brown-console-table-fluted-sides.jpg"],
+    images: ["/images/products/brown-wooden-console-table-3-drawer.jpg"],
     dimensions: "Console table",
     material: "Wood, polished finish",
   },
@@ -1989,7 +1989,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A console table with a black and gold hexagon frame base and a slim marble-look top.",
-    images: ["/images/products/hexagon-console-table-black-gold-frame.jpg"],
+    images: ["/images/products/hexagon-console-table-black-gold.jpg"],
     dimensions: "Console table",
     material: "Marble-look top, black and gold metal",
   },
@@ -2004,7 +2004,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A sculptural console with gold spiral-ring supports, a marble-look top and a matching marble-look base.",
-    images: ["/images/products/gold-spiral-console-table-marble-base.jpg"],
+    images: ["/images/products/white-marble-gold-ring-console-table.jpg"],
     dimensions: "Console table",
     material: "Marble-look top and base, gold-finished metal",
   },
@@ -2018,7 +2018,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A console table with a gold X-shaped frame, a marble-look inlay and a slim rounded-end top.",
-    images: ["/images/products/gold-x-frame-console-table-marble-look.jpg"],
+    images: ["/images/products/gold-x-base-marble-console-table.jpg"],
     dimensions: "Console table",
     material: "Marble-look top, gold-finished metal",
   },
@@ -2047,7 +2047,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A white console table with two roomy drawers with silver handles on angled gold metal legs.",
-    images: ["/images/products/white-2-drawer-console-table-gold-legs.jpg"],
+    images: ["/images/products/white-console-table-gold-legs-2-drawer.jpg"],
     dimensions: "Console table with 2 drawers",
     material: "Painted wood, gold-finished metal legs",
   },
@@ -2062,7 +2062,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A slim black metal-frame console with a marble-look top and lower shelf, sold with a framed wall portrait.",
-    images: ["/images/products/black-frame-console-table-marble-top-portrait.jpg"],
+    images: ["/images/products/marble-top-console-table-with-portrait.jpg"],
     dimensions: "Console table with wall portrait",
     material: "Marble-look top, black metal frame",
   },
@@ -2076,7 +2076,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A slim black console table with a sleek top and square metal legs, ideal for narrow hallways.",
-    images: ["/images/products/slim-black-metal-console-table.jpg"],
+    images: ["/images/products/slim-black-console-table-with-round-mirror.jpg"],
     dimensions: "Slim console",
     material: "Black metal and wood",
   },
@@ -2091,7 +2091,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A black console table with two drawers with gold handles on a geometric gold metal frame.",
-    images: ["/images/products/black-2-drawer-console-table-gold-legs.jpg"],
+    images: ["/images/products/black-console-table-gold-frame-2-drawer.jpg"],
     dimensions: "Console table with 2 drawers",
     material: "Painted wood, gold-finished metal",
   },
@@ -2105,7 +2105,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A glossy black console table with a smooth top and slatted side supports.",
-    images: ["/images/products/black-slatted-leg-console-table.jpg"],
+    images: ["/images/products/black-wooden-console-table-3-drawer.jpg"],
     dimensions: "Console table",
     material: "Painted wood, glossy finish",
   },
@@ -2120,7 +2120,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A bunk bed with a built-in staircase of storage cupboards, drawers underneath and safety rails, in white with purple fronts.",
-    images: ["/images/products/bunk-bed-staircase-storage-white-purple.jpg"],
+    images: ["/images/products/white-purple-bunk-bed-storage-staircase.jpg"],
     dimensions: "Bunk bed with staircase storage",
     material: "Painted wood",
   },
@@ -2134,7 +2134,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A bunk bed with a built-in staircase of storage cupboards, drawers underneath and safety rails, in grey and white.",
-    images: ["/images/products/bunk-bed-staircase-storage-grey-white.jpg"],
+    images: ["/images/products/olive-green-white-bunk-bed-storage-staircase.jpg"],
     dimensions: "Bunk bed with staircase storage",
     material: "Painted wood",
   },
@@ -2149,7 +2149,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A wide white chest of drawers with six smooth-front drawers for bedroom storage.",
-    images: ["/images/products/white-chest-of-drawers-six-drawer.jpg"],
+    images: ["/images/products/white-chest-of-drawers-6-drawer.jpg"],
     dimensions: "Chest of drawers",
     material: "Painted wood",
   },
@@ -2163,7 +2163,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A white chest of drawers with staggered pink drawer fronts for a playful look.",
-    images: ["/images/products/white-pink-chest-of-drawers.jpg"],
+    images: ["/images/products/red-white-chest-of-drawers-6-drawer.jpg"],
     dimensions: "Chest of drawers",
     material: "Painted wood",
   },
@@ -2178,7 +2178,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A tall white chest of drawers with panelled drawer fronts edged in gold trim.",
-    images: ["/images/products/white-chest-of-drawers-gold-trim.jpg"],
+    images: ["/images/products/white-chest-of-drawers-7-drawer-wood-trim.jpg"],
     dimensions: "Chest of drawers",
     material: "Painted wood, gold trim",
   },
@@ -2192,7 +2192,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A blue chenille sofa with rounded arms, deep seat cushions and a low dark base on tapered legs.",
-    images: ["/images/products/round-arm-sofa-blue-chenille-3-seater.jpg"],
+    images: ["/images/products/round-arm-sofa-3-seater-blue-chenille.jpg"],
     dimensions: "3-Seater",
     material: "Chenille fabric upholstery",
   },
@@ -2207,7 +2207,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A green chenille 2+1 sofa set with square box arms and plump seat and back cushions.",
-    images: ["/images/products/box-arm-sofa-set-green-2-1.jpg"],
+    images: ["/images/products/box-arm-sofa-set-2plus1-green-chenille.jpg"],
     dimensions: "2+1 set (2-seater and armchair)",
     material: "Chenille fabric upholstery",
   },
@@ -2221,7 +2221,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A cream chenille 3-seater sofa with piped cushions and softly flared arms.",
-    images: ["/images/products/cream-chenille-3-seater-sofa.jpg"],
+    images: ["/images/products/3-seater-sofa-cream-chenille-flared-arms.jpg"],
     dimensions: "3-Seater",
     material: "Chenille fabric upholstery",
   },
@@ -2236,7 +2236,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A cream chenille sofa set with a 3-seater, a 2-seater and two armchairs, finished with matching lattice-pattern accents.",
-    images: ["/images/products/cream-sofa-set-3-2-1-1-patterned-armchairs.jpg"],
+    images: ["/images/products/sofa-set-3plus2plus1plus1-cream-patterned.jpg"],
     dimensions: "3+2+1+1 set",
     material: "Chenille fabric upholstery",
   },
@@ -2250,7 +2250,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A beige 3+2 sofa set with soft curved arms trimmed in dark wood and generous back cushions.",
-    images: ["/images/products/curved-arm-sofa-set-beige-3-2.jpg"],
+    images: ["/images/products/sofa-set-3plus2-beige-curved-arms.jpg"],
     dimensions: "3+2 set",
     material: "Fabric upholstery, wood trim",
   },
@@ -2265,7 +2265,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A grey crushed-velvet 3+2 sofa set with deep seats and dark wooden feet.",
-    images: ["/images/products/grey-crushed-velvet-sofa-set-3-2.jpg"],
+    images: ["/images/products/sofa-set-3plus2-grey-chenille-wood-trim.jpg"],
     dimensions: "3+2 set",
     material: "Velvet fabric upholstery",
   },
@@ -2279,7 +2279,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A cream 3-seater sofa with clean track arms, three seat cushions and soft back cushions.",
-    images: ["/images/products/cream-track-arm-3-seater-sofa.jpg"],
+    images: ["/images/products/3-seater-sofa-light-grey-box-arms.jpg"],
     dimensions: "3-Seater",
     material: "Fabric upholstery",
   },
@@ -2294,7 +2294,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A cream 3+1+1 sofa set with rolled arms and brass nailhead trim.",
-    images: ["/images/products/cream-nailhead-sofa-set-3-1-1.jpg"],
+    images: ["/images/products/sofa-set-3plus1plus1-cream-rolled-arm-studs.jpg"],
     dimensions: "3+1+1 set",
     material: "Fabric upholstery",
   },
@@ -2308,7 +2308,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A green chenille 2-seater in the No 9 design, with rolled arms, nailhead trim and plump cushions.",
-    images: ["/images/products/no-9-design-2-seater-sofa-green.jpg"],
+    images: ["/images/products/2-seater-sofa-green-chenille-rolled-arm-studs.jpg"],
     dimensions: "2-Seater",
     material: "Chenille fabric upholstery",
   },
@@ -2323,7 +2323,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A green chenille 3-seater in the No 9 design, with rolled arms, nailhead trim and plump cushions.",
-    images: ["/images/products/no-9-design-3-seater-sofa-green.jpg"],
+    images: ["/images/products/3-seater-sofa-green-chenille-rolled-arm-studs.jpg"],
     dimensions: "3-Seater",
     material: "Chenille fabric upholstery",
   },
@@ -2337,7 +2337,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A dark grey 3+2 sofa set in the No 9 design, with rolled arms and nailhead trim.",
-    images: ["/images/products/no-9-design-3-2-sofa-set-dark-grey.jpg"],
+    images: ["/images/products/sofa-set-3plus2-grey-boucle-rolled-arm-studs.jpg"],
     dimensions: "3+2 set",
     material: "Fabric upholstery",
   },
@@ -2352,7 +2352,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A grey 3-seater sofa with rolled arms, brass nailhead trim and loose back cushions.",
-    images: ["/images/products/grey-nailhead-rolled-arm-3-seater-sofa.jpg"],
+    images: ["/images/products/3-seater-sofa-grey-chenille-rolled-arm-studs.jpg"],
     dimensions: "3-Seater",
     material: "Chenille fabric upholstery",
   },
@@ -2366,7 +2366,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A grey 2-seater in the No 9 design, with rolled arms and nailhead trim.",
-    images: ["/images/products/no-9-design-2-seater-sofa-grey.jpg"],
+    images: ["/images/products/2-seater-sofa-grey-chenille-rolled-arm-studs.jpg"],
     dimensions: "2-Seater",
     material: "Chenille fabric upholstery",
   },
@@ -2381,7 +2381,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A taupe 3+2 sofa set with scrolled arms, nailhead trim and wooden feet.",
-    images: ["/images/products/taupe-scroll-arm-sofa-set-3-2.jpg"],
+    images: ["/images/products/sofa-set-3plus2-taupe-chenille-scroll-arm-studs.jpg"],
     dimensions: "3+2 set",
     material: "Fabric upholstery",
   },
@@ -2395,7 +2395,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A taupe 3-seater with scrolled arms, nailhead trim and turned wooden feet.",
-    images: ["/images/products/taupe-scroll-arm-3-seater-sofa.jpg"],
+    images: ["/images/products/3-seater-sofa-taupe-chenille-scroll-arm-studs.jpg"],
     dimensions: "3-Seater",
     material: "Fabric upholstery",
   },
@@ -2410,7 +2410,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A grey chenille 3+1+1 sofa set with rolled arms, a 3-seater and two armchairs.",
-    images: ["/images/products/grey-rolled-arm-sofa-set-3-1-1.jpg"],
+    images: ["/images/products/sofa-set-3plus1plus1-grey-chenille-rolled-arm-studs.jpg"],
     dimensions: "3+1+1 set",
     material: "Chenille fabric upholstery",
   },
@@ -2424,7 +2424,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A grey velvet-look 3-seater with rolled arms, brass nailhead trim and soft back cushions.",
-    images: ["/images/products/grey-velvet-look-rolled-arm-3-seater-sofa.jpg"],
+    images: ["/images/products/3-seater-sofa-grey-crushed-chenille-rolled-arm-studs.jpg"],
     dimensions: "3-Seater",
     material: "Velvet-look fabric upholstery",
   },
@@ -2439,7 +2439,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A navy wingback armchair with a button-tufted back and brass stud trim.",
-    images: ["/images/products/navy-wingback-armchair-tufted-stud-trim.jpg"],
+    images: ["/images/products/navy-wingback-armchair-tufted-studs.jpg"],
     dimensions: "Armchair",
     material: "Chenille fabric upholstery, wooden legs",
   },
@@ -2627,7 +2627,7 @@ export const products: Product[] = [
     showPrice: true,
     description:
       "A charcoal chenille sofa with a button-tufted back and wide square arms.",
-    images: ["/images/products/charcoal-chenille-tufted-back-sofa-3-seater.jpg"],
+    images: ["/images/products/charcoal-chenille-tufted-back-sofa-3seater.jpg"],
     dimensions: "3-Seater",
     material: "Chenille fabric upholstery",
   },
