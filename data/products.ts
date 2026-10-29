@@ -850,6 +850,7 @@ export const products: Product[] = [
     subcategory: "tv-units",
     regularPrice: 68500,
     showPrice: true,
+    availability: "on-order",
     description:
       "A sleek floating wall-mounted TV unit with a fluted wood panel finish, giving a clean, modern entertainment wall look.",
     images: ["/images/products/floating-tv-unit-fluted-panel.jpg"],
@@ -1140,6 +1141,7 @@ export const products: Product[] = [
     subcategory: "tv-units",
     regularPrice: 67000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A TV unit with a marble-effect panel backdrop and open display shelving.",
     images: ["/images/products/tv-unit-marble-panel.jpg"],
@@ -1155,6 +1157,7 @@ export const products: Product[] = [
     regularPrice: 117100,
     salePrice: 82000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A black TV unit with a marble-effect panel backdrop and open display shelving.",
     images: ["/images/products/black-tv-unit-marble-panel.jpg"],
@@ -1169,6 +1172,7 @@ export const products: Product[] = [
     subcategory: "tv-units",
     regularPrice: 89000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A multi-tier entertainment center with open shelving for a TV and media/display storage.",
     images: ["/images/products/entertainment-center-shelving.jpg"],
@@ -1184,6 +1188,7 @@ export const products: Product[] = [
     regularPrice: 104000,
     salePrice: 78000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A glossy white TV unit with a backlit display panel for a bright, modern media wall.",
     images: ["/images/products/white-tv-unit-backlit-panel.jpg"],
@@ -1198,6 +1203,7 @@ export const products: Product[] = [
     subcategory: "tv-units",
     regularPrice: 85000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A TV unit combining open wood shelving with a marble-effect accent panel.",
     images: ["/images/products/tv-unit-wood-shelving-marble.jpg"],
@@ -1213,6 +1219,7 @@ export const products: Product[] = [
     regularPrice: 87700,
     salePrice: 61400,
     showPrice: true,
+    availability: "on-order",
     description:
       "A TV unit with a fluted panel design and a built-in electric fireplace insert for a cozy, modern entertainment centerpiece.",
     images: ["/images/products/fireplace-tv-unit-fluted-panel.jpg"],
@@ -1227,6 +1234,7 @@ export const products: Product[] = [
     subcategory: "tv-units",
     regularPrice: 89000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A grey fluted wood TV unit with a clean, modern silhouette.",
     images: ["/images/products/grey-wood-fluted-tv-unit.jpg"],
@@ -1242,6 +1250,7 @@ export const products: Product[] = [
     regularPrice: 126700,
     salePrice: 95000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A white TV unit with dual open shelving sections for media and display storage.",
     images: ["/images/products/white-tv-unit-dual-shelving.jpg"],
@@ -1256,6 +1265,7 @@ export const products: Product[] = [
     subcategory: "tv-units",
     regularPrice: 68000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A beige TV unit with a blue LED-lit marble-effect panel for a bold accent look.",
     images: ["/images/products/beige-tv-unit-blue-led-panel.jpg"],
@@ -1717,7 +1727,7 @@ export const products: Product[] = [
     slug: "custom-u-shape-sectional-sofa-grey",
     name: "Custom U-Shaped Sectional Sofa",
     room: "living-room",
-    subcategory: "sofas",
+    subcategory: "sectionals",
     regularPrice: 155000,
     showPrice: true,
     availability: "on-order",
@@ -1850,7 +1860,7 @@ export const products: Product[] = [
     slug: "side-arm-chaise-sofa-6seater-beige",
     name: "Side-Arm Chaise Sofa (Beige, 6-Seater)",
     room: "living-room",
-    subcategory: "sofas",
+    subcategory: "sectionals",
     regularPrice: 80714,
     salePrice: 56500,
     showPrice: true,
@@ -1865,7 +1875,7 @@ export const products: Product[] = [
     slug: "side-arm-chaise-sofa-grey-tufted",
     name: "Side-Arm Chaise Sofa (Grey Tufted)",
     room: "living-room",
-    subcategory: "sofas",
+    subcategory: "sectionals",
     regularPrice: 57000,
     showPrice: true,
     description:
@@ -1944,6 +1954,7 @@ export const products: Product[] = [
     regularPrice: 22667,
     salePrice: 17000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A slim white console table with a ribbed front and bold black triple-bar metal legs.",
     images: ["/images/products/white-fluted-console-table-black-legs.jpg"],
@@ -1958,6 +1969,7 @@ export const products: Product[] = [
     subcategory: "console-tables",
     regularPrice: 20500,
     showPrice: true,
+    availability: "on-order",
     description:
       "A statement console with a black marble-look top, an inverted-triangle base and gold metal bars on a gold plinth.",
     images: ["/images/products/black-marble-gold-console-table-v-base.jpg"],
@@ -1973,6 +1985,7 @@ export const products: Product[] = [
     regularPrice: 26429,
     salePrice: 18500,
     showPrice: true,
+    availability: "on-order",
     description:
       "A brown wood console table with a three-panel front and fluted side panels, a warm classic piece for a hallway or sitting room.",
     images: ["/images/products/brown-wooden-console-table-3-drawer.jpg"],
@@ -1987,6 +2000,7 @@ export const products: Product[] = [
     subcategory: "console-tables",
     regularPrice: 19600,
     showPrice: true,
+    availability: "on-order",
     description:
       "A console table with a black and gold hexagon frame base and a slim marble-look top.",
     images: ["/images/products/hexagon-console-table-black-gold.jpg"],
@@ -2002,6 +2016,7 @@ export const products: Product[] = [
     regularPrice: 32667,
     salePrice: 24500,
     showPrice: true,
+    availability: "on-order",
     description:
       "A sculptural console with gold spiral-ring supports, a marble-look top and a matching marble-look base.",
     images: ["/images/products/white-marble-gold-ring-console-table.jpg"],
@@ -2016,6 +2031,7 @@ export const products: Product[] = [
     subcategory: "console-tables",
     regularPrice: 19500,
     showPrice: true,
+    availability: "on-order",
     description:
       "A console table with a gold X-shaped frame, a marble-look inlay and a slim rounded-end top.",
     images: ["/images/products/gold-x-base-marble-console-table.jpg"],
@@ -2031,6 +2047,7 @@ export const products: Product[] = [
     regularPrice: 23429,
     salePrice: 16400,
     showPrice: true,
+    availability: "on-order",
     description:
       "A console table with a black glass top on gold ring supports and a slatted gold base.",
     images: ["/images/products/gold-ring-console-table-black-glass-top.jpg"],
@@ -2045,6 +2062,7 @@ export const products: Product[] = [
     subcategory: "console-tables",
     regularPrice: 19000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A white console table with two roomy drawers with silver handles on angled gold metal legs.",
     images: ["/images/products/white-console-table-gold-legs-2-drawer.jpg"],
@@ -2060,6 +2078,7 @@ export const products: Product[] = [
     regularPrice: 26665,
     salePrice: 19999,
     showPrice: true,
+    availability: "on-order",
     description:
       "A slim black metal-frame console with a marble-look top and lower shelf, sold with a framed wall portrait.",
     images: ["/images/products/marble-top-console-table-with-portrait.jpg"],
@@ -2074,6 +2093,7 @@ export const products: Product[] = [
     subcategory: "console-tables",
     regularPrice: 19999,
     showPrice: true,
+    availability: "on-order",
     description:
       "A slim black console table with a sleek top and square metal legs, ideal for narrow hallways.",
     images: ["/images/products/slim-black-console-table-with-round-mirror.jpg"],
@@ -2089,6 +2109,7 @@ export const products: Product[] = [
     regularPrice: 28571,
     salePrice: 20000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A black console table with two drawers with gold handles on a geometric gold metal frame.",
     images: ["/images/products/black-console-table-gold-frame-2-drawer.jpg"],
@@ -2103,6 +2124,7 @@ export const products: Product[] = [
     subcategory: "console-tables",
     regularPrice: 20000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A glossy black console table with a smooth top and slatted side supports.",
     images: ["/images/products/black-wooden-console-table-3-drawer.jpg"],
@@ -2118,6 +2140,7 @@ export const products: Product[] = [
     regularPrice: 86667,
     salePrice: 65000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A bunk bed with a built-in staircase of storage cupboards, drawers underneath and safety rails, in white with purple fronts.",
     images: ["/images/products/white-purple-bunk-bed-storage-staircase.jpg"],
@@ -2132,6 +2155,7 @@ export const products: Product[] = [
     subcategory: "beds",
     regularPrice: 65000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A bunk bed with a built-in staircase of storage cupboards, drawers underneath and safety rails, in grey and white.",
     images: ["/images/products/olive-green-white-bunk-bed-storage-staircase.jpg"],
@@ -2147,6 +2171,7 @@ export const products: Product[] = [
     regularPrice: 45714,
     salePrice: 32000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A wide white chest of drawers with six smooth-front drawers for bedroom storage.",
     images: ["/images/products/white-chest-of-drawers-6-drawer.jpg"],
@@ -2161,6 +2186,7 @@ export const products: Product[] = [
     subcategory: "chest-of-drawers",
     regularPrice: 32000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A white chest of drawers with staggered pink drawer fronts for a playful look.",
     images: ["/images/products/red-white-chest-of-drawers-6-drawer.jpg"],
@@ -2176,6 +2202,7 @@ export const products: Product[] = [
     regularPrice: 42667,
     salePrice: 32000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A tall white chest of drawers with panelled drawer fronts edged in gold trim.",
     images: ["/images/products/white-chest-of-drawers-7-drawer-wood-trim.jpg"],
@@ -2190,6 +2217,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 40000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A blue chenille sofa with rounded arms, deep seat cushions and a low dark base on tapered legs.",
     images: ["/images/products/round-arm-sofa-3-seater-blue-chenille.jpg"],
@@ -2205,6 +2233,7 @@ export const products: Product[] = [
     regularPrice: 82857,
     salePrice: 58000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A green chenille 2+1 sofa set with square box arms and plump seat and back cushions.",
     images: ["/images/products/box-arm-sofa-set-2plus1-green-chenille.jpg"],
@@ -2219,6 +2248,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 38000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A cream chenille 3-seater sofa with piped cushions and softly flared arms.",
     images: ["/images/products/3-seater-sofa-cream-chenille-flared-arms.jpg"],
@@ -2234,6 +2264,7 @@ export const products: Product[] = [
     regularPrice: 130667,
     salePrice: 98000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A cream chenille sofa set with a 3-seater, a 2-seater and two armchairs, finished with matching lattice-pattern accents.",
     images: ["/images/products/sofa-set-3plus2plus1plus1-cream-patterned.jpg"],
@@ -2248,6 +2279,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 75000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A beige 3+2 sofa set with soft curved arms trimmed in dark wood and generous back cushions.",
     images: ["/images/products/sofa-set-3plus2-beige-curved-arms.jpg"],
@@ -2263,6 +2295,7 @@ export const products: Product[] = [
     regularPrice: 92857,
     salePrice: 65000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A grey crushed-velvet 3+2 sofa set with deep seats and dark wooden feet.",
     images: ["/images/products/sofa-set-3plus2-grey-chenille-wood-trim.jpg"],
@@ -2277,6 +2310,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 35000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A cream 3-seater sofa with clean track arms, three seat cushions and soft back cushions.",
     images: ["/images/products/3-seater-sofa-light-grey-box-arms.jpg"],
@@ -2292,6 +2326,7 @@ export const products: Product[] = [
     regularPrice: 93333,
     salePrice: 70000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A cream 3+1+1 sofa set with rolled arms and brass nailhead trim.",
     images: ["/images/products/sofa-set-3plus1plus1-cream-rolled-arm-studs.jpg"],
@@ -2306,6 +2341,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 29999,
     showPrice: true,
+    availability: "on-order",
     description:
       "A green chenille 2-seater in the No 9 design, with rolled arms, nailhead trim and plump cushions.",
     images: ["/images/products/2-seater-sofa-green-chenille-rolled-arm-studs.jpg"],
@@ -2321,6 +2357,7 @@ export const products: Product[] = [
     regularPrice: 49999,
     salePrice: 34999,
     showPrice: true,
+    availability: "on-order",
     description:
       "A green chenille 3-seater in the No 9 design, with rolled arms, nailhead trim and plump cushions.",
     images: ["/images/products/3-seater-sofa-green-chenille-rolled-arm-studs.jpg"],
@@ -2335,6 +2372,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 59999,
     showPrice: true,
+    availability: "on-order",
     description:
       "A dark grey 3+2 sofa set in the No 9 design, with rolled arms and nailhead trim.",
     images: ["/images/products/sofa-set-3plus2-grey-boucle-rolled-arm-studs.jpg"],
@@ -2350,6 +2388,7 @@ export const products: Product[] = [
     regularPrice: 46665,
     salePrice: 34999,
     showPrice: true,
+    availability: "on-order",
     description:
       "A grey 3-seater sofa with rolled arms, brass nailhead trim and loose back cushions.",
     images: ["/images/products/3-seater-sofa-grey-chenille-rolled-arm-studs.jpg"],
@@ -2364,6 +2403,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 29999,
     showPrice: true,
+    availability: "on-order",
     description:
       "A grey 2-seater in the No 9 design, with rolled arms and nailhead trim.",
     images: ["/images/products/2-seater-sofa-grey-chenille-rolled-arm-studs.jpg"],
@@ -2379,6 +2419,7 @@ export const products: Product[] = [
     regularPrice: 91429,
     salePrice: 64000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A taupe 3+2 sofa set with scrolled arms, nailhead trim and wooden feet.",
     images: ["/images/products/sofa-set-3plus2-taupe-chenille-scroll-arm-studs.jpg"],
@@ -2393,6 +2434,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 34500,
     showPrice: true,
+    availability: "on-order",
     description:
       "A taupe 3-seater with scrolled arms, nailhead trim and turned wooden feet.",
     images: ["/images/products/3-seater-sofa-taupe-chenille-scroll-arm-studs.jpg"],
@@ -2408,6 +2450,7 @@ export const products: Product[] = [
     regularPrice: 99333,
     salePrice: 74500,
     showPrice: true,
+    availability: "on-order",
     description:
       "A grey chenille 3+1+1 sofa set with rolled arms, a 3-seater and two armchairs.",
     images: ["/images/products/sofa-set-3plus1plus1-grey-chenille-rolled-arm-studs.jpg"],
@@ -2422,6 +2465,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 39000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A grey velvet-look 3-seater with rolled arms, brass nailhead trim and soft back cushions.",
     images: ["/images/products/3-seater-sofa-grey-crushed-chenille-rolled-arm-studs.jpg"],
@@ -2437,6 +2481,7 @@ export const products: Product[] = [
     regularPrice: 34286,
     salePrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A navy wingback armchair with a button-tufted back and brass stud trim.",
     images: ["/images/products/navy-wingback-armchair-tufted-studs.jpg"],
@@ -2451,6 +2496,7 @@ export const products: Product[] = [
     subcategory: "armchairs",
     regularPrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A scalloped shell-back armchair available in blue, mustard and orange.",
     images: ["/images/products/scalloped-shell-armchair-multicolour.jpg"],
@@ -2466,6 +2512,7 @@ export const products: Product[] = [
     regularPrice: 32000,
     salePrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A teal-blue chenille wingback armchair with vertical channel stitching on the back and dark tapered legs.",
     images: ["/images/products/blue-channel-back-wingback-armchair.jpg"],
@@ -2480,6 +2527,7 @@ export const products: Product[] = [
     subcategory: "armchairs",
     regularPrice: 28000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A round swivel snuggle chair in textured grey chenille with a deep seat and scatter cushions.",
     images: ["/images/products/grey-swivel-snuggle-chair.jpg"],
@@ -2495,6 +2543,7 @@ export const products: Product[] = [
     regularPrice: 34286,
     salePrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A wingback armchair in a beige and brown brushstroke print with rolled arms and dark wooden legs.",
     images: ["/images/products/printed-wingback-armchair-brushstroke.jpg"],
@@ -2509,6 +2558,7 @@ export const products: Product[] = [
     subcategory: "armchairs",
     regularPrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A grey-blue wingback armchair with a straight high back, brass stud trim and dark curved legs.",
     images: ["/images/products/grey-blue-nailhead-wingback-armchair.jpg"],
@@ -2524,6 +2574,7 @@ export const products: Product[] = [
     regularPrice: 32000,
     salePrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A channel-back wingback armchair in an orange and teal abstract jacquard with dark tapered legs.",
     images: ["/images/products/abstract-jacquard-channel-back-armchair.jpg"],
@@ -2538,6 +2589,7 @@ export const products: Product[] = [
     subcategory: "armchairs",
     regularPrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A mustard-gold velvet wingback armchair with a button-tufted back, brass stud trim and dark tapered legs.",
     images: ["/images/products/mustard-tufted-wingback-armchair-stud-trim.jpg"],
@@ -2553,6 +2605,7 @@ export const products: Product[] = [
     regularPrice: 34286,
     salePrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A navy chenille wingback armchair with a button-tufted back, scrolled arms, brass studs and dark wooden legs.",
     images: ["/images/products/navy-chenille-tufted-wingback-armchair.jpg"],
@@ -2567,6 +2620,7 @@ export const products: Product[] = [
     subcategory: "armchairs",
     regularPrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A rust-orange velvet armchair with a softly curved wing, a three-button tufted back and dark legs.",
     images: ["/images/products/rust-velvet-button-back-armchair.jpg"],
@@ -2582,6 +2636,7 @@ export const products: Product[] = [
     regularPrice: 32000,
     salePrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A round tub armchair in teal-blue chenille with a channelled scalloped back and a low base.",
     images: ["/images/products/teal-scallop-back-tub-armchair.jpg"],
@@ -2596,6 +2651,7 @@ export const products: Product[] = [
     subcategory: "armchairs",
     regularPrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A round tub armchair in yellow fabric with a gold-fleck finish, a scalloped back and gold metal legs.",
     images: ["/images/products/yellow-metallic-scallop-tub-armchair.jpg"],
@@ -2611,6 +2667,7 @@ export const products: Product[] = [
     regularPrice: 34286,
     salePrice: 24000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A round tub armchair in rust-brown woven fabric with a channelled scalloped back and dark wooden legs.",
     images: ["/images/products/rust-scallop-back-tub-armchair.jpg"],
@@ -2625,6 +2682,7 @@ export const products: Product[] = [
     subcategory: "sofas",
     regularPrice: 34500,
     showPrice: true,
+    availability: "on-order",
     description:
       "A charcoal chenille sofa with a button-tufted back and wide square arms.",
     images: ["/images/products/charcoal-chenille-tufted-back-sofa-3seater.jpg"],
@@ -2640,6 +2698,7 @@ export const products: Product[] = [
     regularPrice: 86667,
     salePrice: 65000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A mahogany rectangular coffee table with scalloped edges, a carved apron and curved legs, with four matching stools.",
     images: ["/images/products/mahogany-rectangular-coffee-table-with-stools.jpg"],
@@ -2654,6 +2713,7 @@ export const products: Product[] = [
     subcategory: "sectionals",
     regularPrice: 88000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A charcoal chenille L-shape sectional with button-tufted backs, wide square arms and a matching storage ottoman.",
     images: ["/images/products/charcoal-chenille-l-shape-sectional-storage-ottoman.jpg"],
@@ -2669,6 +2729,7 @@ export const products: Product[] = [
     regularPrice: 78571,
     salePrice: 55000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A cream chenille 3-seater sofa with a right-hand chaise, wide square arms and piped cushions.",
     images: ["/images/products/cream-chenille-l-shape-chaise-sofa.jpg"],
@@ -2683,6 +2744,7 @@ export const products: Product[] = [
     subcategory: "dressing-tables",
     regularPrice: 34000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A white dressing table with seven drawers with gold knobs, a geometric gold-framed mirror and an upholstered stool.",
     images: ["/images/products/white-dressing-table-gold-frame-mirror-stool.jpg"],
@@ -2698,6 +2760,7 @@ export const products: Product[] = [
     regularPrice: 42667,
     salePrice: 32000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A white painted wooden bed with stepped rectangular panels on the headboard and footboard. Bed only.",
     images: ["/images/products/white-stepped-panel-wooden-bed-5x6.jpg"],
@@ -2712,6 +2775,7 @@ export const products: Product[] = [
     subcategory: "beds",
     regularPrice: 26000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A white painted wooden bed with stepped rectangular panels on the headboard and footboard. Bed only.",
     images: ["/images/products/white-stepped-panel-wooden-bed-3-5x6.jpg"],
@@ -2727,6 +2791,7 @@ export const products: Product[] = [
     regularPrice: 35714,
     salePrice: 25000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A white painted wooden bed with stepped rectangular panels on the headboard and footboard. Bed only.",
     images: ["/images/products/white-stepped-panel-wooden-bed-3x6.jpg"],
@@ -2741,6 +2806,7 @@ export const products: Product[] = [
     subcategory: "beds",
     regularPrice: 35000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A dark espresso-finished wooden bed with a panelled headboard and footboard, moulded cornice top and bun feet. Bed only.",
     images: ["/images/products/dark-wood-panelled-bed-6x6.jpg"],
@@ -2756,6 +2822,7 @@ export const products: Product[] = [
     regularPrice: 26667,
     salePrice: 20000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A long, low white TV stand with four flat-front doors, an angled cut-out top edge and tapered legs.",
     images: ["/images/products/white-4-door-tv-stand.jpg"],
@@ -2770,6 +2837,7 @@ export const products: Product[] = [
     subcategory: "tv-stands",
     regularPrice: 20000,
     showPrice: true,
+    availability: "on-order",
     description:
       "A dark brown TV stand with textured diamond-pattern side doors, a centre open shelf and drawer, black round knobs and tapered legs.",
     images: ["/images/products/dark-brown-diamond-door-tv-stand.jpg"],
