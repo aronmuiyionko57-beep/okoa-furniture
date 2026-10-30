@@ -14,7 +14,7 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 const MESSAGES = [
   { text: "Black November: up to 30% off", cta: "Shop now", href: "/living-room" },
   { text: "Buy a sofa, get a free mirror", cta: "View sofas", href: "/living-room/sofas" },
-  { text: "Buy a bed, get a free pouffe", cta: "View beds", href: "/bedroom/beds" },
+  { text: "Buy a bed, get a free pouffe or mirror", cta: "View beds", href: "/bedroom/beds" },
   { text: "Order via WhatsApp", cta: "Chat now", href: WHATSAPP_URL },
   { text: "Offers end 30th November", cta: "Shop now", href: "/living-room" },
 ];
