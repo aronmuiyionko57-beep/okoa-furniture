@@ -10,3 +10,4 @@ export const SOCIAL_LINKS = {
   tiktok: "https://www.tiktok.com/@okoafurniture",
   facebook: "https://www.facebook.com/okoafurniture",
 };
+export const GA_MEASUREMENT_ID = "G-FE343BT985";

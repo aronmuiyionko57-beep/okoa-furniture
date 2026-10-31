@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google"; // ← added
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
-import { SITE_URL } from "@/lib/config";
+import { SITE_URL, GA_MEASUREMENT_ID } from "@/lib/config"; // ← changed
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -71,6 +72,7 @@ export default function RootLayout({
         <Footer />
         <FloatingContact />
       </body>
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} /> {/* ← added */}
     </html>
   );
 }
