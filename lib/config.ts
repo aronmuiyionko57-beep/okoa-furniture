@@ -8,6 +8,6 @@ export const MAPS_LINK = "https://maps.app.goo.gl/UcyP7UAiBY8td7577";
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/okoafurniture",
   tiktok: "https://www.tiktok.com/@okoafurniture",
-  facebook: "https://www.facebook.com/okoafurniture",
+  facebook: "https://www.facebook.com/okoafurnitures",
 };
 export const GA_MEASUREMENT_ID = "G-FE343BT985";
