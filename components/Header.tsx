@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { rooms } from "@/data/categories";
+import { visibleRooms } from "@/data/categories";
 import SearchBar from "@/components/SearchBar";
 import { WHATSAPP_NUMBER } from "@/lib/config";
 
@@ -30,7 +30,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6 h-full flex-nowrap overflow-x-auto">
-          {rooms.map((room) => (
+          {visibleRooms.map((room) => (
             <div
               key={room.slug}
               className="relative h-full flex items-center"
@@ -90,7 +90,7 @@ export default function Header() {
       {/* Mobile menu panel */}
       {mobileOpen && (
         <div id="mobile-menu-panel" className="lg:hidden border-t border-okoa-border bg-okoa-white">
-          {rooms.map((room) => (
+          {visibleRooms.map((room) => (
             <div key={room.slug} className="border-b border-okoa-border">
               <div className="flex items-center justify-between px-4 py-3">
                 <Link

@@ -7,6 +7,8 @@ export interface Room {
   slug: string;
   name: string;
   subcategories: Subcategory[];
+  /** Hidden rooms stay reachable by direct link but are left out of the menus, footer, home tiles and sitemap. */
+  hidden?: boolean;
 }
 
 export const rooms: Room[] = [
@@ -58,6 +60,7 @@ export const rooms: Room[] = [
   {
     slug: "outdoor",
     name: "Outdoor",
+    hidden: true, // client request: hide until there are enough products. Remove this line to show it again.
     subcategories: [
       { slug: "outdoor-sofas", name: "Outdoor Sofas" },
       { slug: "outdoor-chairs", name: "Outdoor Chairs" },
@@ -86,3 +89,6 @@ export const rooms: Room[] = [
     ],
   },
 ];
+
+/** Rooms shown in navigation, footer, homepage tiles and the sitemap. */
+export const visibleRooms: Room[] = rooms.filter((room) => !room.hidden);

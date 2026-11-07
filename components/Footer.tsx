@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { rooms } from "@/data/categories";
+import { visibleRooms } from "@/data/categories";
 import { WHATSAPP_NUMBER, PHONE_DISPLAY, BUSINESS_EMAIL, MAPS_LINK, SOCIAL_LINKS } from "@/lib/config";
 
 function InstagramIcon() {
@@ -110,7 +110,7 @@ export default function Footer() {
               Shop
             </h4>
             <ul className="space-y-3 text-sm">
-              {rooms.map((room) => (
+              {visibleRooms.map((room) => (
                 <li key={room.slug}>
                   <Link
                     href={`/${room.slug}`}

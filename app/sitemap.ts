@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { rooms } from "@/data/categories";
+import { visibleRooms } from "@/data/categories";
 import { products } from "@/data/products";
 import { SITE_URL } from "@/lib/config";
 
@@ -13,14 +13,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  const roomPages: MetadataRoute.Sitemap = rooms.map((room) => ({
+  const roomPages: MetadataRoute.Sitemap = visibleRooms.map((room) => ({
     url: `${SITE_URL}/${room.slug}`,
     lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.8,
   }));
 
-  const subcategoryPages: MetadataRoute.Sitemap = rooms.flatMap((room) =>
+  const subcategoryPages: MetadataRoute.Sitemap = visibleRooms.flatMap((room) =>
     room.subcategories.map((sub) => ({
       url: `${SITE_URL}/${room.slug}/${sub.slug}`,
       lastModified: new Date(),

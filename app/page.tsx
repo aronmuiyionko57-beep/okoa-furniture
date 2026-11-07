@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { rooms } from "@/data/categories";
+import { visibleRooms } from "@/data/categories";
 import { products } from "@/data/products";
 import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import { SITE_URL, WHATSAPP_NUMBER, BUSINESS_EMAIL, SOCIAL_LINKS } from "@/lib/config";
@@ -34,7 +34,7 @@ export default function Home() {
     "@type": "FurnitureStore",
     name: "OKOA Furniture",
     description:
-      "Quality modern furniture for every room — living room, bedroom, dining, home office, outdoor, and custom pieces.",
+      "Quality modern furniture for every room — living room, bedroom, dining, home office, and custom pieces.",
     url: SITE_URL,
     telephone: `+${WHATSAPP_NUMBER}`,
     email: BUSINESS_EMAIL,
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-          {rooms.map((room) => {
+          {visibleRooms.map((room) => {
             const img = roomImages[room.slug];
             return (
               <Link

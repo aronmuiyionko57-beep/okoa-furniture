@@ -4219,14 +4219,14 @@ export const products: Product[] = [
   {
     id: "281",
     slug: "blue-grey-recliner-sofa-3-seater",
-    name: "Blue-Grey Recliner Sofa (3 Seater)",
+    name: "Blue-Grey Semi-Recliner Sofa (3 Seater)",
     room: "living-room",
-    subcategory: "recliners",
+    subcategory: "semi-recliners",
     regularPrice: 48000,
     showPrice: true,
     availability: "on-order",
     description:
-      "A blue-grey 3-seater recliner sofa with channel-stitched backs, contoured seats and wide padded arms.",
+      "A blue-grey 3-seater semi-recliner sofa with channel-stitched backs, contoured seats and wide padded arms.",
     images: ["/images/products/blue-grey-recliner-sofa-3-seater.jpg"],
     dimensions: "3-Seater",
     material: "Suede-feel fabric upholstery",
@@ -4277,5 +4277,20 @@ export const products: Product[] = [
     images: ["/images/products/taupe-grey-semi-recliner-sofa-3-seater.jpg"],
     dimensions: "3-Seater",
     material: "Suede-feel fabric upholstery",
+  },
+  {
+    id: "285",
+    slug: "green-l-shape-sofa-4-seater",
+    name: "Green L-Shape Sofa (4 Seater)",
+    room: "living-room",
+    subcategory: "sectionals",
+    regularPrice: 49500,
+    showPrice: true,
+    availability: "on-order",
+    description:
+      "A sage-green 4-seater L-shape sofa with a wide chaise, plush back cushions, piped edges and flared arms.",
+    images: ["/images/products/green-l-shape-sofa-4-seater.jpg"],
+    dimensions: "4-Seater L-Shape",
+    material: "Chenille fabric upholstery",
   },
 ];

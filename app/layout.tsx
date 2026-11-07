@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Shop modern furniture for every room — living room, bedroom, dining, home office, outdoor, and custom pieces.",
+    "Shop modern furniture for every room — living room, bedroom, dining, home office, and custom pieces.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
