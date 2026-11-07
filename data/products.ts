@@ -4293,4 +4293,20 @@ export const products: Product[] = [
     dimensions: "4-Seater L-Shape",
     material: "Chenille fabric upholstery",
   },
+  {
+    id: "286",
+    slug: "beige-l-shape-sofa-7-seater",
+    name: "Beige L-Shape Sofa (7 Seater)",
+    room: "living-room",
+    subcategory: "sectionals",
+    regularPrice: 86667,
+    salePrice: 65000,
+    showPrice: true,
+    availability: "on-order",
+    description:
+      "A beige 7-seater L-shape sectional with a wide chaise, tufted back and seat cushions and high-density foam for lasting comfort.",
+    images: ["/images/products/beige-l-shape-sofa-7-seater.jpg"],
+    dimensions: "7-Seater L-Shape",
+    material: "Textured chenille fabric, high-density foam cushions",
+  },
 ];
