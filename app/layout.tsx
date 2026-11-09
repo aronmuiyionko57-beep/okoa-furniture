@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
 import ContactClickTracker from "@/components/ContactClickTracker";
+import MetaPixel from "@/components/MetaPixel";
 import { SITE_URL, GA_MEASUREMENT_ID } from "@/lib/config";
 
 const geistSans = Geist({
@@ -73,6 +74,7 @@ export default function RootLayout({
         <Footer />
         <FloatingContact />
         <ContactClickTracker />
+        <MetaPixel />
       </body>
       <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
