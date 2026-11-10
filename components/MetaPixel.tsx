@@ -35,6 +35,9 @@ export default function MetaPixel() {
       const href = link?.getAttribute("href") ?? "";
       if (/wa\.me|whatsapp\.com|^whatsapp:|^tel:/i.test(href)) {
         window.fbq?.("track", "Contact");
+        // Also send InitiateCheckout: a WhatsApp/phone click is the customer
+        // starting an order. Sales campaigns can optimise for this event.
+        window.fbq?.("track", "InitiateCheckout", { currency: "KES" });
       }
     };
     document.addEventListener("click", handleClick, true);
