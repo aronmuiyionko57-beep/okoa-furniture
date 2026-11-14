@@ -19,7 +19,7 @@ const PRICE_RANGES = [
 ];
 
 const SORT_OPTIONS = [
-  { label: "Featured", value: "featured" },
+  { label: "Newest First", value: "newest" },
   { label: "Price: Low to High", value: "price-asc" },
   { label: "Price: High to Low", value: "price-desc" },
 ];
@@ -27,7 +27,7 @@ const SORT_OPTIONS = [
 export default function ProductFilters({ items }: { items: Product[] }) {
   const [priceRange, setPriceRange] = useState(0);
   const [onSaleOnly, setOnSaleOnly] = useState(false);
-  const [sort, setSort] = useState("featured");
+  const [sort, setSort] = useState("newest");
 
   const filtered = useMemo(() => {
     let result = [...items];
@@ -42,7 +42,9 @@ export default function ProductFilters({ items }: { items: Product[] }) {
       result = result.filter((p) => isOnSale(p));
     }
 
-    if (sort === "price-asc") {
+    if (sort === "newest") {
+      result.sort((a, b) => Number(b.id) - Number(a.id));
+    } else if (sort === "price-asc") {
       result.sort((a, b) => getDisplayPrice(a) - getDisplayPrice(b));
     } else if (sort === "price-desc") {
       result.sort((a, b) => getDisplayPrice(b) - getDisplayPrice(a));
