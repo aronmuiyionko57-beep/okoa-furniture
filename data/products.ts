@@ -4417,4 +4417,20 @@ export const products: Product[] = [
     dimensions: "3+2+2 Set (7 Seater)",
     material: "Soft fabric upholstery",
   },
+  {
+    id: "294",
+    slug: "rust-brown-sofa-set-3-2",
+    name: "Rust Brown Sofa Set (3+2, 5 Seater)",
+    room: "living-room",
+    subcategory: "sofas",
+    regularPrice: 86667,
+    salePrice: 65000,
+    showPrice: true,
+    availability: "on-order",
+    description:
+      "A rust-brown 5-seater sofa set with a 3-seater and a 2-seater, piped cushions, deep seats and rounded roll arms.",
+    images: ["/images/products/rust-brown-sofa-set-3-2.jpg"],
+    dimensions: "3+2 Set (5 Seater)",
+    material: "Soft chenille fabric upholstery",
+  },
 ];
