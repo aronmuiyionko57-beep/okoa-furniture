@@ -66,8 +66,21 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ ok: false }, { status: 400 });
   }
 
-  const ip = req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || undefined;
+  // Visitor's IP: try every header Vercel may set
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+    req.headers.get("x-real-ip")?.trim() ||
+    req.headers.get("x-vercel-forwarded-for")?.split(",")[0]?.trim() ||
+    undefined;
   const userAgent = req.headers.get("user-agent") || undefined;
+  const fbp = shortString(body.fbp);
+  const fbc = shortString(body.fbc);
+
+  // Meta needs at least some visitor info to use a server event.
+  // If we have none, skip the server copy (the browser Pixel still counts the click).
+  if (!(ip && userAgent) && !fbp && !fbc) {
+    return NextResponse.json({ ok: true, skipped: "no user data" });
+  }
   const eventTime = Math.floor(Date.now() / 1000);
   const sourceUrl = safeSourceUrl(body.url);
 
@@ -82,8 +95,8 @@ export async function POST(req: NextRequest) {
       user_data: {
         client_ip_address: ip,
         client_user_agent: userAgent,
-        fbp: shortString(body.fbp),
-        fbc: shortString(body.fbc),
+        fbp,
+        fbc,
       },
       custom_data:
         e.eventName === "InitiateCheckout"
