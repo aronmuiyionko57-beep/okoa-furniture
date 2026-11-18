@@ -6,6 +6,7 @@ import { useState } from "react";
 import { visibleRooms } from "@/data/categories";
 import SearchBar from "@/components/SearchBar";
 import { WHATSAPP_NUMBER } from "@/lib/config";
+import { WhatsAppIcon } from "@/components/icons";
 
 export default function Header() {
   const [openRoom, setOpenRoom] = useState<string | null>(null);
@@ -67,8 +68,9 @@ export default function Header() {
           <a
             href={`https://wa.me/${WHATSAPP_NUMBER}`}
             target="_blank"
-            className="bg-okoa-dark text-white text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded-md hover:bg-okoa-orange transition-colors duration-300"
+            className="inline-flex items-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebe5a] text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded-md transition-colors duration-300"
           >
+            <WhatsAppIcon size={18} />
             Order via WhatsApp
           </a>
         </div>
@@ -133,8 +135,9 @@ export default function Header() {
             <a
               href={`https://wa.me/${WHATSAPP_NUMBER}`}
               target="_blank"
-              className="block text-center bg-okoa-dark text-white text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded-md"
+              className="flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebe5a] text-xs font-semibold uppercase tracking-widest px-6 py-3 rounded-md"
             >
+              <WhatsAppIcon size={18} />
               Order via WhatsApp
             </a>
           </div>

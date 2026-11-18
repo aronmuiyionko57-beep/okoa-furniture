@@ -7,7 +7,7 @@ import { Product } from "@/data/products";
 import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import { getAvailabilityLabel, getAvailabilityColor } from "@/lib/availability";
 import { getWhatsAppOrderLink } from "@/lib/whatsapp";
-import { PhoneIcon } from "@/components/icons";
+import { PhoneIcon, WhatsAppIcon } from "@/components/icons";
 import { WHATSAPP_NUMBER, SITE_URL } from "@/lib/config";
 
 const PRICE_RANGES = [
@@ -161,14 +161,15 @@ export default function ProductFilters({ items }: { items: Product[] }) {
                         `${SITE_URL}/product/${product.slug}`
                       )}
                       target="_blank"
-                      className="flex-1 text-center bg-okoa-dark text-white py-2.5 rounded-md text-sm font-semibold uppercase tracking-wide hover:bg-okoa-orange transition-colors duration-300"
+                      className="flex-1 inline-flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebe5a] py-2.5 rounded-md text-sm font-semibold uppercase tracking-wide transition-colors duration-300"
                     >
+                      <WhatsAppIcon size={18} />
                       Order via WhatsApp
                     </a>
                     <a
                       href={`tel:+${WHATSAPP_NUMBER}`}
                       aria-label="Call us"
-                      className="shrink-0 w-11 flex items-center justify-center border border-okoa-border rounded-md text-okoa-dark hover:border-okoa-dark hover:bg-okoa-dark hover:text-white transition-colors duration-300"
+                      className="shrink-0 w-11 flex items-center justify-center bg-[#128C7E] text-white hover:bg-[#0e7469] rounded-md transition-colors duration-300"
                     >
                       <PhoneIcon />
                     </a>

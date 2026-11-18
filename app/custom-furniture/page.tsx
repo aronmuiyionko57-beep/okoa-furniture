@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { WHATSAPP_NUMBER } from "@/lib/config";
+import { WhatsAppIcon } from "@/components/icons";
 
 const furnitureTypes = [
   "Sofa",
@@ -143,12 +144,13 @@ export default function CustomFurniturePage() {
             target="_blank"
             aria-disabled={!canSubmit}
             tabIndex={canSubmit ? 0 : -1}
-            className={`block text-center px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest transition-colors duration-300 ${
+            className={`flex items-center justify-center gap-2 px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest transition-colors duration-300 ${
               canSubmit
-                ? "bg-okoa-orange text-white hover:bg-okoa-dark cursor-pointer"
+                ? "bg-[#25D366] text-white hover:bg-[#1ebe5a] cursor-pointer"
                 : "bg-gray-100 text-gray-400 cursor-not-allowed pointer-events-none"
             }`}
           >
+            <WhatsAppIcon size={20} />
             Send Request via WhatsApp
           </a>
           {!canSubmit && (

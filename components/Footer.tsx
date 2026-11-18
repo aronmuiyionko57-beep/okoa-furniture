@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { visibleRooms } from "@/data/categories";
+import { PhoneIcon, WhatsAppIcon } from "@/components/icons";
 import { WHATSAPP_NUMBER, PHONE_DISPLAY, BUSINESS_EMAIL, MAPS_LINK, SOCIAL_LINKS } from "@/lib/config";
 
 function InstagramIcon() {
@@ -29,22 +30,6 @@ function FacebookIcon() {
   );
 }
 
-function WhatsAppIcon() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .9.9-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.6.8-.8 1-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5.1-.1.2-.3.4-.4.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2.1 3.2 5 4.4.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z" />
-    </svg>
-  );
-}
-
-function PhoneIcon() {
-  return (
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z" />
-    </svg>
-  );
-}
-
 function EmailIcon() {
   return (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -63,8 +48,12 @@ function MapPinIcon() {
   );
 }
 
+function FooterWhatsApp() {
+  return <WhatsAppIcon size={18} />;
+}
+
 const socialLinks = [
-  { href: `https://wa.me/${WHATSAPP_NUMBER}`, label: "Chat on WhatsApp", icon: WhatsAppIcon },
+  { href: `https://wa.me/${WHATSAPP_NUMBER}`, label: "Chat on WhatsApp", icon: FooterWhatsApp },
   { href: SOCIAL_LINKS.instagram, label: "OKOA Furniture on Instagram", icon: InstagramIcon },
   { href: SOCIAL_LINKS.facebook, label: "OKOA Furniture on Facebook", icon: FacebookIcon },
   { href: SOCIAL_LINKS.tiktok, label: "OKOA Furniture on TikTok", icon: TikTokIcon },
@@ -154,7 +143,7 @@ export default function Footer() {
                   href={`tel:+${WHATSAPP_NUMBER}`}
                   className="flex items-center gap-2 text-gray-300 hover:text-okoa-orange transition-colors"
                 >
-                  <PhoneIcon />
+                  <PhoneIcon size={16} className="text-[#25D366]" />
                   {PHONE_DISPLAY}
                 </a>
               </li>
@@ -164,7 +153,7 @@ export default function Footer() {
                   target="_blank"
                   className="flex items-center gap-2 text-gray-300 hover:text-okoa-orange transition-colors"
                 >
-                  <WhatsAppIcon />
+                  <WhatsAppIcon size={18} className="text-[#25D366]" />
                   WhatsApp Us
                 </a>
               </li>

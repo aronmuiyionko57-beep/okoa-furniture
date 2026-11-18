@@ -6,7 +6,7 @@ import { isOnSale, getDiscountPercent, getDisplayPrice } from "@/lib/pricing";
 import { getAvailabilityLabel, getAvailabilityColor } from "@/lib/availability";
 import { SITE_URL } from "@/lib/config";
 import ProductImageCarousel from "@/components/ProductImageCarousel";
-import { PhoneIcon } from "@/components/icons";
+import { PhoneIcon, WhatsAppIcon } from "@/components/icons";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -228,13 +228,14 @@ export default async function ProductPage({
                 `${SITE_URL}/product/${product.slug}`
               )}
               target="_blank"
-              className="inline-flex items-center justify-center gap-2 bg-okoa-dark text-white px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:bg-okoa-orange transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white hover:bg-[#1ebe5a] px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest transition-colors duration-300"
             >
+              <WhatsAppIcon size={20} />
               Order via WhatsApp
             </a>
             <a
               href="tel:+254711682894"
-              className="inline-flex items-center justify-center gap-2 border border-gray-300 text-okoa-dark px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest hover:border-okoa-dark transition-colors duration-300"
+              className="inline-flex items-center justify-center gap-2 bg-[#128C7E] text-white hover:bg-[#0e7469] px-8 py-4 rounded-md font-semibold uppercase text-sm tracking-widest transition-colors duration-300"
             >
               <PhoneIcon />
               Call Us
